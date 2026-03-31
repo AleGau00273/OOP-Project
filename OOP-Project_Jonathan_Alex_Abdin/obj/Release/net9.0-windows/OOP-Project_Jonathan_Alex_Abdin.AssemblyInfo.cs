@@ -12,7 +12,7 @@ using System;
 using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("OOP-Project_Jonathan_Alex_Abdin")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
+[assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f09ab68e6014dfe854a9d1f21927ac2971704e6e")]
 [assembly: System.Reflection.AssemblyProductAttribute("OOP-Project_Jonathan_Alex_Abdin")]
