@@ -14,6 +14,7 @@ namespace OOP_Project_Jonathan_Alex_Abdin
         List<ElectricVehicle> ElectricVehiclesList = new List<ElectricVehicle>();
         List<HydrogenVehicle> HydrogenVehiclesList = new List<HydrogenVehicle>();
 
+        public string DriverName { get; set; }
         public string VehicleID { get; set; }
         public double VehicleSize { get; set; }
         public double MaxCapacity { get; set; }
@@ -71,6 +72,10 @@ namespace OOP_Project_Jonathan_Alex_Abdin
 
     //Creating ElectricVan class (Sealed)
     public sealed class ElectricVan : ElectricVehicle
+    {
+    }
+
+    public sealed class ElectricBike : ElectricVehicle 
     {
     }
 
