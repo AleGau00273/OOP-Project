@@ -10,40 +10,48 @@ namespace OOP_Project_Jonathan_Alex_Abdin
     // Creating Main Vehicle Class (Abstract)
     public abstract class Vehicle
     {
-        // Properties
-        public string vehicleID { get; set; }
-        public double vehicleSize { get; set; }
-        public double maxCapacity { get; set; }
-        public double currentLoad { get; set; }
+        // Properties and lists
+        List<ElectricVehicle> ElectricVehiclesList = new List<ElectricVehicle>();
+        List<HydrogenVehicle> HydrogenVehiclesList = new List<HydrogenVehicle>();
+
+        public string VehicleID { get; set; }
+        public double VehicleSize { get; set; }
+        public double MaxCapacity { get; set; }
+        public double CurrentWeightLoad { get; set; }
+        public double CurrentSizeLoad { get; set; }
 
         // Methods
         public void addPackage(Package pkg) 
         {
         }
         public double getRemainingCapacity() {
-            return 0.1;
+            return MaxCapacity - CurrentWeightLoad;
         }
         public double getRemainingSize() 
         {
-            return 0.1;
+            return VehicleSize - CurrentSizeLoad;
         }
     }
     //Creating ElectricVehicle class 
     public class ElectricVehicle : Vehicle 
     {
+        // Properties
+        public double BatteryLevel { get; set; }
         //Methods
         public double checkBatteryLevel() 
         {
-            return 0.1;
+            return BatteryLevel;
         }
     }
     //Creating HydrogenVehicle class 
     public class HydrogenVehicle : Vehicle
     {
+        // Properties
+        public double HydrogenLevel { get; set; }
         //Methods
         public double checkHydrogenLevel()
         {
-            return 0.1;
+            return HydrogenLevel;
         }
     }
 
