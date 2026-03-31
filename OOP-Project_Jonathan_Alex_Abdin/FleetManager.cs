@@ -9,7 +9,16 @@ namespace OOP_Project_Jonathan_Alex_Abdin
     public class FleetManager
     {
         // Properties and lists
-        List<Vehicle> Vehicles = new List<Vehicle>();
+        private List<Vehicle> Vehicles = new List<Vehicle>();
 
+        //Methods
+        public void AddVehicle(Vehicle vec) 
+        {
+            Vehicles.Add(vec);
+        }
+        public void RemoveVehicle(Vehicle vec) 
+        {
+            Vehicles.Remove(vec);
+        }
     }
 }
