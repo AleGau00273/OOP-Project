@@ -1,8 +1,8 @@
 namespace OOP_Project_Jonathan_Alex_Abdin
 {
-    public partial class Form1 : Form
+    public partial class frmFleetDashboard : Form
     {
-        public Form1()
+        public frmFleetDashboard()
         {
             InitializeComponent();
         }
