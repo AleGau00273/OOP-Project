@@ -1,6 +1,6 @@
 ﻿namespace OOP_Project_Jonathan_Alex_Abdin
 {
-    partial class Form1
+    partial class frmFleetDashboard
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFleetDashboard));
             grpRegistration = new GroupBox();
             radTruck = new RadioButton();
             radVan = new RadioButton();
@@ -493,11 +493,11 @@
             btnManageFuel.Text = "[Manage &Fuel/Battery]";
             btnManageFuel.UseVisualStyleBackColor = false;
             // 
-            // Form1
+            // frmFleetDashboard
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(244, 247, 246);
+            BackColor = Color.FromArgb(222, 245, 233);
             ClientSize = new Size(1278, 644);
             Controls.Add(btnManageFuel);
             Controls.Add(grpVehicleDetails);
@@ -512,7 +512,7 @@
             Controls.Add(grpRegistration);
             Controls.Add(lblgrpBack);
             ForeColor = Color.Black;
-            Name = "Form1";
+            Name = "frmFleetDashboard";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "EcoLink: Operations Command";
             Load += Form1_Load;
