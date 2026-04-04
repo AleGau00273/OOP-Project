@@ -143,7 +143,7 @@
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(174, 214, 241);
-            ClientSize = new Size(707, 549);
+            ClientSize = new Size(708, 515);
             Controls.Add(btnCancel);
             Controls.Add(btnConfirm);
             Controls.Add(grpDriverSelection);

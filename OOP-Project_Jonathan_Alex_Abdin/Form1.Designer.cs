@@ -236,10 +236,11 @@
             // lblTotalCount
             // 
             lblTotalCount.AutoSize = true;
+            lblTotalCount.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTotalCount.ForeColor = Color.Black;
             lblTotalCount.Location = new Point(609, 492);
             lblTotalCount.Name = "lblTotalCount";
-            lblTotalCount.Size = new Size(135, 25);
+            lblTotalCount.Size = new Size(148, 25);
             lblTotalCount.TabIndex = 0;
             lblTotalCount.Text = "Total Vehicles: 0";
             // 
@@ -278,6 +279,7 @@
             // lblFuelStatus
             // 
             lblFuelStatus.AutoSize = true;
+            lblFuelStatus.BackColor = Color.White;
             lblFuelStatus.Location = new Point(152, 434);
             lblFuelStatus.Name = "lblFuelStatus";
             lblFuelStatus.Size = new Size(64, 25);
@@ -287,6 +289,7 @@
             // lblFuelPercent
             // 
             lblFuelPercent.AutoSize = true;
+            lblFuelPercent.BackColor = Color.White;
             lblFuelPercent.Location = new Point(323, 434);
             lblFuelPercent.Name = "lblFuelPercent";
             lblFuelPercent.Size = new Size(64, 25);
@@ -314,6 +317,7 @@
             // label9
             // 
             label9.AutoSize = true;
+            label9.BackColor = Color.White;
             label9.Location = new Point(22, 434);
             label9.Name = "label9";
             label9.Size = new Size(124, 25);
@@ -322,7 +326,8 @@
             // 
             // label15
             // 
-            label15.BorderStyle = BorderStyle.FixedSingle;
+            label15.BackColor = Color.White;
+            label15.BorderStyle = BorderStyle.Fixed3D;
             label15.Location = new Point(12, 420);
             label15.Name = "label15";
             label15.Size = new Size(396, 56);
@@ -428,6 +433,7 @@
             // 
             // picBike
             // 
+            picBike.BackColor = Color.White;
             picBike.BorderStyle = BorderStyle.Fixed3D;
             picBike.Image = (Image)resources.GetObject("picBike.Image");
             picBike.Location = new Point(22, 40);
@@ -439,6 +445,7 @@
             // 
             // picDrone
             // 
+            picDrone.BackColor = Color.White;
             picDrone.BorderStyle = BorderStyle.Fixed3D;
             picDrone.Image = (Image)resources.GetObject("picDrone.Image");
             picDrone.Location = new Point(22, 40);
@@ -450,6 +457,7 @@
             // 
             // picCar
             // 
+            picCar.BackColor = Color.White;
             picCar.BorderStyle = BorderStyle.Fixed3D;
             picCar.Image = (Image)resources.GetObject("picCar.Image");
             picCar.Location = new Point(22, 40);
@@ -461,6 +469,7 @@
             // 
             // picVan
             // 
+            picVan.BackColor = Color.White;
             picVan.BorderStyle = BorderStyle.Fixed3D;
             picVan.Image = (Image)resources.GetObject("picVan.Image");
             picVan.Location = new Point(22, 40);
@@ -472,6 +481,7 @@
             // 
             // picTruck
             // 
+            picTruck.BackColor = Color.White;
             picTruck.BorderStyle = BorderStyle.Fixed3D;
             picTruck.Image = (Image)resources.GetObject("picTruck.Image");
             picTruck.Location = new Point(22, 40);

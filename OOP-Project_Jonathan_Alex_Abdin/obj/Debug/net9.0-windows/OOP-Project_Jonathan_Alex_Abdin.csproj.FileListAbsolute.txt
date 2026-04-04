@@ -3,7 +3,6 @@ C:\Users\alexa\OneDrive\Documentos\OOP-Project\OOP-Project_Jonathan_Alex_Abdin\b
 C:\Users\alexa\OneDrive\Documentos\OOP-Project\OOP-Project_Jonathan_Alex_Abdin\bin\Debug\net9.0-windows\OOP-Project_Jonathan_Alex_Abdin.runtimeconfig.json
 C:\Users\alexa\OneDrive\Documentos\OOP-Project\OOP-Project_Jonathan_Alex_Abdin\bin\Debug\net9.0-windows\OOP-Project_Jonathan_Alex_Abdin.dll
 C:\Users\alexa\OneDrive\Documentos\OOP-Project\OOP-Project_Jonathan_Alex_Abdin\bin\Debug\net9.0-windows\OOP-Project_Jonathan_Alex_Abdin.pdb
-C:\Users\alexa\OneDrive\Documentos\OOP-Project\OOP-Project_Jonathan_Alex_Abdin\obj\Debug\net9.0-windows\OOP_Project_Jonathan_Alex_Abdin.Form1.resources
 C:\Users\alexa\OneDrive\Documentos\OOP-Project\OOP-Project_Jonathan_Alex_Abdin\obj\Debug\net9.0-windows\OOP_Project_Jonathan_Alex_Abdin.Properties.Resources.resources
 C:\Users\alexa\OneDrive\Documentos\OOP-Project\OOP-Project_Jonathan_Alex_Abdin\obj\Debug\net9.0-windows\OOP-Project_Jonathan_Alex_Abdin.csproj.GenerateResource.cache
 C:\Users\alexa\OneDrive\Documentos\OOP-Project\OOP-Project_Jonathan_Alex_Abdin\obj\Debug\net9.0-windows\OOP-Project_Jonathan_Alex_Abdin.GeneratedMSBuildEditorConfig.editorconfig
@@ -16,3 +15,6 @@ C:\Users\alexa\OneDrive\Documentos\OOP-Project\OOP-Project_Jonathan_Alex_Abdin\o
 C:\Users\alexa\OneDrive\Documentos\OOP-Project\OOP-Project_Jonathan_Alex_Abdin\obj\Debug\net9.0-windows\OOP-Project_Jonathan_Alex_Abdin.pdb
 C:\Users\alexa\OneDrive\Documentos\OOP-Project\OOP-Project_Jonathan_Alex_Abdin\obj\Debug\net9.0-windows\OOP-Project_Jonathan_Alex_Abdin.genruntimeconfig.cache
 C:\Users\alexa\OneDrive\Documentos\OOP-Project\OOP-Project_Jonathan_Alex_Abdin\obj\Debug\net9.0-windows\ref\OOP-Project_Jonathan_Alex_Abdin.dll
+C:\Users\alexa\OneDrive\Documentos\OOP-Project\OOP-Project_Jonathan_Alex_Abdin\obj\Debug\net9.0-windows\OOP_Project_Jonathan_Alex_Abdin.frmFleetDashboard.resources
+C:\Users\alexa\OneDrive\Documentos\OOP-Project\OOP-Project_Jonathan_Alex_Abdin\obj\Debug\net9.0-windows\OOP_Project_Jonathan_Alex_Abdin.frmAssignDriver.resources
+C:\Users\alexa\OneDrive\Documentos\OOP-Project\OOP-Project_Jonathan_Alex_Abdin\obj\Debug\net9.0-windows\OOP_Project_Jonathan_Alex_Abdin.Form3.resources
