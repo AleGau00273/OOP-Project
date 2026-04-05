@@ -62,10 +62,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.Location = new Point(227, 36);
             label1.Name = "label1";
-            label1.Size = new Size(376, 54);
+            label1.Size = new Size(353, 54);
             label1.TabIndex = 1;
             label1.Text = "Loading Cargo for:";
             // 

@@ -426,6 +426,7 @@
             // label3
             // 
             label3.BorderStyle = BorderStyle.Fixed3D;
+            label3.Enabled = false;
             label3.Location = new Point(6, 208);
             label3.Name = "label3";
             label3.Size = new Size(406, 3);

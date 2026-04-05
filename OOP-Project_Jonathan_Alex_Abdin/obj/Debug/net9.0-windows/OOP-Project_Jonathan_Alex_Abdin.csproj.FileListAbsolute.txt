@@ -17,4 +17,5 @@ C:\Users\alexa\OneDrive\Documentos\OOP-Project\OOP-Project_Jonathan_Alex_Abdin\o
 C:\Users\alexa\OneDrive\Documentos\OOP-Project\OOP-Project_Jonathan_Alex_Abdin\obj\Debug\net9.0-windows\ref\OOP-Project_Jonathan_Alex_Abdin.dll
 C:\Users\alexa\OneDrive\Documentos\OOP-Project\OOP-Project_Jonathan_Alex_Abdin\obj\Debug\net9.0-windows\OOP_Project_Jonathan_Alex_Abdin.frmFleetDashboard.resources
 C:\Users\alexa\OneDrive\Documentos\OOP-Project\OOP-Project_Jonathan_Alex_Abdin\obj\Debug\net9.0-windows\OOP_Project_Jonathan_Alex_Abdin.frmAssignDriver.resources
-C:\Users\alexa\OneDrive\Documentos\OOP-Project\OOP-Project_Jonathan_Alex_Abdin\obj\Debug\net9.0-windows\OOP_Project_Jonathan_Alex_Abdin.Form3.resources
+C:\Users\alexa\OneDrive\Documentos\OOP-Project\OOP-Project_Jonathan_Alex_Abdin\obj\Debug\net9.0-windows\OOP_Project_Jonathan_Alex_Abdin.frmManageCargo.resources
+C:\Users\alexa\OneDrive\Documentos\OOP-Project\OOP-Project_Jonathan_Alex_Abdin\obj\Debug\net9.0-windows\OOP_Project_Jonathan_Alex_Abdin.frmManageFuel.resources
