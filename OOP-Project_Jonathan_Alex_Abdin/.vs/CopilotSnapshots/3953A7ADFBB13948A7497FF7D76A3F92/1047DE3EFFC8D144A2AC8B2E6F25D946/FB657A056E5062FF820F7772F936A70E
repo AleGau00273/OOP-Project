@@ -1,0 +1,35 @@
+﻿using Member2Tests.cs;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace OOP_Project_Jonathan_Alex_Abdin
+{
+    public class Driver
+    {
+        //Properties and lists
+
+        List<Driver> drivers = new List<Driver>();
+
+        public string DriverID { get; set; }
+        public string DriverName { get; set; }
+        public string Phone { get; set; }
+        public string City { get; set; }
+        public string Email { get; set; }
+        public int DriverYearsOfExperience { get; set; }
+        public double DriverWage { get; set; }
+
+        //Methods
+
+        public void AddDriver(Driver driver) 
+        {
+            drivers.Add(driver);
+        }
+        public void RemoveDriver(Driver driver) 
+        {
+            drivers.Remove(driver);
+        }
+    }
+}

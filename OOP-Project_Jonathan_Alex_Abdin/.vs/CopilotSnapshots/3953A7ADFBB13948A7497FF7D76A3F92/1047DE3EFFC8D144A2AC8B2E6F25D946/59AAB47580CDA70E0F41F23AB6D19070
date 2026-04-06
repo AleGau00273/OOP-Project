@@ -1,0 +1,57 @@
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OOP_Project_Jonathan_Alex_Abdin;
+using System.Text;
+
+namespace LogisticsTests
+{
+    [TestClass]
+    public class Member2Tests
+    {
+        [TestMethod]
+        public void Drone_Limit_ShouldBe5kg()
+        {
+            Drone drone = new Drone();
+            Assert.AreEqual(5, drone.MaxCapacity);
+        }
+
+        [TestMethod]
+        public void Truck_Limit_ShouldBe5000kg()
+        {
+            HeavydutyHydrogenTruck truck = new HeavydutyHydrogenTruck();
+            Assert.AreEqual(5000, truck.MaxCapacity);
+        }
+
+        [TestMethod]
+        public void OperatorOverload_ShouldThrow_WhenDroneOverloaded()
+        {
+            Drone drone = new Drone { VehicleID = "DRN-01" };
+            Package heavyPack = new Package { Weight = 6.0 };
+
+            // This triggers your + operator logic
+            Assert.ThrowsException<InvalidOperationException>(() =>
+            {
+                drone = (Drone)(drone + heavyPack);
+            });
+        }
+
+        [TestMethod]
+        public void Sorting_ShouldOrderSmallestToLargest()
+        {
+            var drone = new Drone { MaxCapacity = 5 };
+            var truck = new HeavydutyHydrogenTruck { MaxCapacity = 5000 };
+            var list = new List<Vehicle> { truck, drone };
+
+            list.Sort(); // Uses IComparable
+
+            Assert.AreEqual(5, list[0].MaxCapacity);
+        }
+
+        [TestMethod]
+        public void MethodOverloading_LoadsCorrectWeight()
+        {
+            Drone drone = new Drone();
+            drone.Load(2.5, 1.0); // Uses the double, double overload
+            Assert.AreEqual(2.5, drone.CurrentWeightLoad);
+        }
+    }
+}
