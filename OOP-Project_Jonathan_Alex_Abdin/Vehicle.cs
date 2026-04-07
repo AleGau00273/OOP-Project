@@ -45,13 +45,19 @@ namespace OOP_Project_Jonathan_Alex_Abdin
 
         // [F-04] Operator Overloading (+) to combine Vehicle and Package
         // [F-08] Exception Handling for capacity violations
+        //Overloads the '+' operator to allow for syntax 'Vehicle + Package'.
+        //Before adding the package it validates if the vehicle has enough capacity.
         public static Vehicle operator +(Vehicle v, Package p)
         {
+            //logical check: Current load + New Package weight vs. Max Allowed.
             if (v.CurrentWeightLoad + p.Weight > v.MaxCapacity)
             {
+                //Throws an exception to catch in the UI and prevent overloading the vehicle.
+                //This prevents the application from processing invalid data.
                 throw new InvalidOperationException("This vehicle can't handle that much weight.");
             }
 
+            //if weight is within limits, proceed to add the package.
             v.CurrentWeightLoad += p.Weight;
             v.CurrentSizeLoad += p.PackageSize;
             v.LoadedPackages.Add(p);
@@ -60,6 +66,9 @@ namespace OOP_Project_Jonathan_Alex_Abdin
         }
 
         // [F-02] IComparable implementation for sorting collections
+        //Sorting Logic
+        //Compares the Current Vehicle's maxCapacity with another vehicle's MaxCapacity
+        //Returns -1 if this is smaller, 1 if larger, and 0 if they are equal
         public int CompareTo(Vehicle? other)
         {
             if (other == null) return 1;
