@@ -46,8 +46,8 @@
             lstWarehouse = new ListBox();
             groupBox2 = new GroupBox();
             lstVehicleCargo = new ListBox();
-            button1 = new Button();
-            button2 = new Button();
+            btnAddCargo = new Button();
+            btnRemoveCargo = new Button();
             btnConfimCargo = new Button();
             btnCancel = new Button();
             ((System.ComponentModel.ISupportInitialize)picBike).BeginInit();
@@ -143,7 +143,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(227, 104);
+            label2.Location = new Point(210, 104);
             label2.Name = "label2";
             label2.Size = new Size(253, 45);
             label2.TabIndex = 28;
@@ -153,7 +153,7 @@
             // 
             lblCurrentWeight.AutoSize = true;
             lblCurrentWeight.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblCurrentWeight.Location = new Point(466, 104);
+            lblCurrentWeight.Location = new Point(450, 104);
             lblCurrentWeight.Name = "lblCurrentWeight";
             lblCurrentWeight.Size = new Size(76, 45);
             lblCurrentWeight.TabIndex = 29;
@@ -163,7 +163,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(533, 104);
+            label4.Location = new Point(568, 104);
             label4.Name = "label4";
             label4.Size = new Size(126, 45);
             label4.TabIndex = 30;
@@ -173,7 +173,7 @@
             // 
             lblMaxWeight.AutoSize = true;
             lblMaxWeight.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblMaxWeight.Location = new Point(644, 104);
+            lblMaxWeight.Location = new Point(680, 104);
             lblMaxWeight.Name = "lblMaxWeight";
             lblMaxWeight.Size = new Size(76, 45);
             lblMaxWeight.TabIndex = 31;
@@ -183,7 +183,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(717, 104);
+            label6.Location = new Point(724, 170);
             label6.Name = "label6";
             label6.Size = new Size(83, 45);
             label6.TabIndex = 32;
@@ -191,7 +191,7 @@
             // 
             // prgCapacity
             // 
-            prgCapacity.Location = new Point(806, 115);
+            prgCapacity.Location = new Point(817, 181);
             prgCapacity.Name = "prgCapacity";
             prgCapacity.Size = new Size(484, 34);
             prgCapacity.TabIndex = 33;
@@ -236,29 +236,31 @@
             lstVehicleCargo.Size = new Size(430, 292);
             lstVehicleCargo.TabIndex = 35;
             // 
-            // button1
+            // btnAddCargo
             // 
-            button1.BackColor = Color.FromArgb(155, 89, 182);
-            button1.FlatStyle = FlatStyle.Popup;
-            button1.Font = new Font("Segoe UI", 36F, FontStyle.Bold);
-            button1.Location = new Point(541, 286);
-            button1.Name = "button1";
-            button1.Size = new Size(251, 107);
-            button1.TabIndex = 37;
-            button1.Text = ">";
-            button1.UseVisualStyleBackColor = false;
+            btnAddCargo.BackColor = Color.FromArgb(155, 89, 182);
+            btnAddCargo.FlatStyle = FlatStyle.Popup;
+            btnAddCargo.Font = new Font("Segoe UI", 36F, FontStyle.Bold);
+            btnAddCargo.Location = new Point(541, 286);
+            btnAddCargo.Name = "btnAddCargo";
+            btnAddCargo.Size = new Size(251, 107);
+            btnAddCargo.TabIndex = 37;
+            btnAddCargo.Text = ">";
+            btnAddCargo.UseVisualStyleBackColor = false;
+            btnAddCargo.Click += btnAddCargo_Click;
             // 
-            // button2
+            // btnRemoveCargo
             // 
-            button2.BackColor = Color.FromArgb(155, 89, 182);
-            button2.FlatStyle = FlatStyle.Popup;
-            button2.Font = new Font("Segoe UI", 36F, FontStyle.Bold);
-            button2.Location = new Point(541, 425);
-            button2.Name = "button2";
-            button2.Size = new Size(251, 107);
-            button2.TabIndex = 38;
-            button2.Text = "<";
-            button2.UseVisualStyleBackColor = false;
+            btnRemoveCargo.BackColor = Color.FromArgb(155, 89, 182);
+            btnRemoveCargo.FlatStyle = FlatStyle.Popup;
+            btnRemoveCargo.Font = new Font("Segoe UI", 36F, FontStyle.Bold);
+            btnRemoveCargo.Location = new Point(541, 425);
+            btnRemoveCargo.Name = "btnRemoveCargo";
+            btnRemoveCargo.Size = new Size(251, 107);
+            btnRemoveCargo.TabIndex = 38;
+            btnRemoveCargo.Text = "<";
+            btnRemoveCargo.UseVisualStyleBackColor = false;
+            btnRemoveCargo.Click += btnRemoveCargo_Click;
             // 
             // btnConfimCargo
             // 
@@ -271,6 +273,7 @@
             btnConfimCargo.TabIndex = 39;
             btnConfimCargo.Text = "[Confirm && Update Fleet]";
             btnConfimCargo.UseVisualStyleBackColor = false;
+            btnConfimCargo.Click += btnConfimCargo_Click;
             // 
             // btnCancel
             // 
@@ -283,17 +286,18 @@
             btnCancel.TabIndex = 40;
             btnCancel.Text = "[Cancel && Close]";
             btnCancel.UseVisualStyleBackColor = false;
+            btnCancel.Click += btnCancel_Click;
             // 
             // frmManageCargo
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(210, 180, 222);
-            ClientSize = new Size(1317, 728);
+            ClientSize = new Size(1338, 728);
             Controls.Add(btnCancel);
             Controls.Add(btnConfimCargo);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btnRemoveCargo);
+            Controls.Add(btnAddCargo);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Controls.Add(prgCapacity);
@@ -311,6 +315,7 @@
             Controls.Add(picTruck);
             Name = "frmManageCargo";
             Text = "Cargo Loading Management - EcoLink Hub";
+            Load += frmManageCargo_Load;
             ((System.ComponentModel.ISupportInitialize)picBike).EndInit();
             ((System.ComponentModel.ISupportInitialize)picDrone).EndInit();
             ((System.ComponentModel.ISupportInitialize)picCar).EndInit();
@@ -341,8 +346,8 @@
         private ListBox lstWarehouse;
         private GroupBox groupBox2;
         private ListBox lstVehicleCargo;
-        private Button button1;
-        private Button button2;
+        private Button btnAddCargo;
+        private Button btnRemoveCargo;
         private Button btnConfimCargo;
         private Button btnCancel;
     }

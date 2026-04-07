@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\alexa\\OneDrive\\Documentos\\OOP-Project\\OOP-Project_Jonathan_Alex_Abdin\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{015DDA25-0013-4584-B179-4BAE612CC487}|OOP-Project_Jonathan_Alex_Abdin.csproj|c:\\users\\alexa\\onedrive\\documentos\\oop-project\\oop-project_jonathan_alex_abdin\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{015DDA25-0013-4584-B179-4BAE612CC487}|OOP-Project_Jonathan_Alex_Abdin.csproj|c:\\users\\alexa\\onedrive\\documentos\\oop-project\\oop-project_jonathan_alex_abdin\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{015DDA25-0013-4584-B179-4BAE612CC487}|OOP-Project_Jonathan_Alex_Abdin.csproj|solutionrelative:form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{015DDA25-0013-4584-B179-4BAE612CC487}|OOP-Project_Jonathan_Alex_Abdin.csproj|C:\\Users\\alexa\\OneDrive\\Documentos\\OOP-Project\\OOP-Project_Jonathan_Alex_Abdin\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{015DDA25-0013-4584-B179-4BAE612CC487}|OOP-Project_Jonathan_Alex_Abdin.csproj|solutionrelative:form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{015DDA25-0013-4584-B179-4BAE612CC487}|OOP-Project_Jonathan_Alex_Abdin.csproj|c:\\users\\alexa\\onedrive\\documentos\\oop-project\\oop-project_jonathan_alex_abdin\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{015DDA25-0013-4584-B179-4BAE612CC487}|OOP-Project_Jonathan_Alex_Abdin.csproj|solutionrelative:form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{015DDA25-0013-4584-B179-4BAE612CC487}|OOP-Project_Jonathan_Alex_Abdin.csproj|C:\\Users\\alexa\\OneDrive\\Documentos\\OOP-Project\\OOP-Project_Jonathan_Alex_Abdin\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{015DDA25-0013-4584-B179-4BAE612CC487}|OOP-Project_Jonathan_Alex_Abdin.csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{015DDA25-0013-4584-B179-4BAE612CC487}|OOP-Project_Jonathan_Alex_Abdin.csproj|c:\\users\\alexa\\onedrive\\documentos\\oop-project\\oop-project_jonathan_alex_abdin\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{015DDA25-0013-4584-B179-4BAE612CC487}|OOP-Project_Jonathan_Alex_Abdin.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{015DDA25-0013-4584-B179-4BAE612CC487}|OOP-Project_Jonathan_Alex_Abdin.csproj|C:\\Users\\alexa\\OneDrive\\Documentos\\OOP-Project\\OOP-Project_Jonathan_Alex_Abdin\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -26,8 +26,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\alexa\\OneDrive\\Documentos\\OOP-Project\\OOP-Project_Jonathan_Alex_Abdin\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\alexa\\OneDrive\\Documentos\\OOP-Project\\OOP-Project_Jonathan_Alex_Abdin\\Form1.cs [Design]",
+              "RelativeToolTip": "Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T11:03:21.658Z",
+              "IsPinned": true
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -38,51 +50,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\alexa\\OneDrive\\Documentos\\OOP-Project\\OOP-Project_Jonathan_Alex_Abdin\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\alexa\\OneDrive\\Documentos\\OOP-Project\\OOP-Project_Jonathan_Alex_Abdin\\Form1.cs [Design]",
-              "RelativeToolTip": "Form1.cs [Design]",
+              "DocumentIndex": 0,
+              "Title": "Form4.cs",
+              "DocumentMoniker": "C:\\Users\\alexa\\OneDrive\\Documentos\\OOP-Project\\OOP-Project_Jonathan_Alex_Abdin\\Form4.cs",
+              "RelativeDocumentMoniker": "Form4.cs",
+              "ToolTip": "C:\\Users\\alexa\\OneDrive\\Documentos\\OOP-Project\\OOP-Project_Jonathan_Alex_Abdin\\Form4.cs",
+              "RelativeToolTip": "Form4.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T01:45:24.756Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Form2.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\alexa\\OneDrive\\Documentos\\OOP-Project\\OOP-Project_Jonathan_Alex_Abdin\\Form2.cs",
-              "RelativeDocumentMoniker": "Form2.cs",
-              "ToolTip": "C:\\Users\\alexa\\OneDrive\\Documentos\\OOP-Project\\OOP-Project_Jonathan_Alex_Abdin\\Form2.cs [Design]",
-              "RelativeToolTip": "Form2.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T11:50:05.231Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-04-07T11:12:39.256Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Form3.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\alexa\\OneDrive\\Documentos\\OOP-Project\\OOP-Project_Jonathan_Alex_Abdin\\Form3.cs",
-              "RelativeDocumentMoniker": "Form3.cs",
-              "ToolTip": "C:\\Users\\alexa\\OneDrive\\Documentos\\OOP-Project\\OOP-Project_Jonathan_Alex_Abdin\\Form3.cs [Design]",
-              "RelativeToolTip": "Form3.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T23:09:42.92Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "Form4.cs [Design]",
               "DocumentMoniker": "C:\\Users\\alexa\\OneDrive\\Documentos\\OOP-Project\\OOP-Project_Jonathan_Alex_Abdin\\Form4.cs",
               "RelativeDocumentMoniker": "Form4.cs",
               "ToolTip": "C:\\Users\\alexa\\OneDrive\\Documentos\\OOP-Project\\OOP-Project_Jonathan_Alex_Abdin\\Form4.cs [Design]",
               "RelativeToolTip": "Form4.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T23:14:20.677Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-04-07T11:12:34.296Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\alexa\\OneDrive\\Documentos\\OOP-Project\\OOP-Project_Jonathan_Alex_Abdin\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\alexa\\OneDrive\\Documentos\\OOP-Project\\OOP-Project_Jonathan_Alex_Abdin\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T11:12:24.208Z"
             }
           ]
         }
