@@ -6,21 +6,42 @@ using System.Threading.Tasks;
 
 namespace OOP_Project_Jonathan_Alex_Abdin
 {
+    // Creating Package class
+    // Features: [F-05] (Encapsulation and Data Validation)
     public class Package
     {
+        // Properties and lists
+        // [F-05] Private backing fields
+        private double _weight;
+        private double _packageSize;
+
         public string PackageID { get; set; }
-        public double Weight { get; set; }
-        public double PackageSize { get; set; }
         public string Description { get; set; }
 
-        public double GetWeight()
+        // [F-05] Public Properties with validation logic
+        public double Weight
         {
-            return Weight;
+            get => _weight;
+            set => _weight = (value < 0) ? 0 : value;
         }
 
-        public double GetSize()
+        public double PackageSize
         {
-            return PackageSize;
+            get => _packageSize;
+            set => _packageSize = (value < 0) ? 0 : value;
         }
+
+        // Methods
+
+        public Package(string id, string desc, double weight, double size)
+        {
+            PackageID = id;
+            Description = desc;
+            Weight = weight;
+            PackageSize = size;
+        }
+
+        public double GetWeight() => Weight;
+        public double GetSize() => PackageSize;
     }
 }

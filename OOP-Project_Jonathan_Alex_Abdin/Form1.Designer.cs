@@ -50,7 +50,7 @@
             lblDisplayMaxPayload = new Label();
             label2 = new Label();
             label9 = new Label();
-            label15 = new Label();
+            lblFuelStatusBack = new Label();
             lblDisplayFuelType = new Label();
             lblDisplayPayload = new Label();
             lblDisplayDriver = new Label();
@@ -147,6 +147,7 @@
             // lblgrpBack
             // 
             lblgrpBack.BorderStyle = BorderStyle.Fixed3D;
+            lblgrpBack.Enabled = false;
             lblgrpBack.ForeColor = Color.FromArgb(45, 62, 80);
             lblgrpBack.Location = new Point(34, 36);
             lblgrpBack.Name = "lblgrpBack";
@@ -164,6 +165,7 @@
             btnRegister.TabIndex = 2;
             btnRegister.Text = "[&Register && Generate ID]";
             btnRegister.UseVisualStyleBackColor = false;
+            btnRegister.Click += btnRegister_Click;
             // 
             // btnAssignDriver
             // 
@@ -176,6 +178,7 @@
             btnAssignDriver.TabIndex = 3;
             btnAssignDriver.Text = "[Assign/Change &Driver]";
             btnAssignDriver.UseVisualStyleBackColor = false;
+            btnAssignDriver.Click += btnAssignDriver_Click;
             // 
             // btnManageCargo
             // 
@@ -188,6 +191,7 @@
             btnManageCargo.TabIndex = 4;
             btnManageCargo.Text = "[Manage &Cargo]";
             btnManageCargo.UseVisualStyleBackColor = false;
+            btnManageCargo.Click += btnManageCargo_Click;
             // 
             // btnRemoveVehicle
             // 
@@ -200,6 +204,7 @@
             btnRemoveVehicle.TabIndex = 5;
             btnRemoveVehicle.Text = "[Remove &Vehicle]";
             btnRemoveVehicle.UseVisualStyleBackColor = false;
+            btnRemoveVehicle.Click += btnRemoveVehicle_Click;
             // 
             // btnExit
             // 
@@ -212,15 +217,17 @@
             btnExit.TabIndex = 7;
             btnExit.Text = "[&Exit Program]";
             btnExit.UseVisualStyleBackColor = false;
+            btnExit.Click += btnExit_Click;
             // 
             // lstFleet
             // 
             lstFleet.ForeColor = Color.Black;
             lstFleet.FormattingEnabled = true;
-            lstFleet.Location = new Point(526, 72);
+            lstFleet.Location = new Point(579, 76);
             lstFleet.Name = "lstFleet";
-            lstFleet.Size = new Size(300, 404);
+            lstFleet.Size = new Size(191, 404);
             lstFleet.TabIndex = 8;
+            lstFleet.SelectedIndexChanged += lstFleet_SelectedIndexChanged;
             // 
             // label1
             // 
@@ -251,7 +258,7 @@
             grpVehicleDetails.Controls.Add(lblDisplayMaxPayload);
             grpVehicleDetails.Controls.Add(label2);
             grpVehicleDetails.Controls.Add(label9);
-            grpVehicleDetails.Controls.Add(label15);
+            grpVehicleDetails.Controls.Add(lblFuelStatusBack);
             grpVehicleDetails.Controls.Add(lblDisplayFuelType);
             grpVehicleDetails.Controls.Add(lblDisplayPayload);
             grpVehicleDetails.Controls.Add(lblDisplayDriver);
@@ -324,19 +331,20 @@
             label9.TabIndex = 0;
             label9.Text = "FUEL STATUS: ";
             // 
-            // label15
+            // lblFuelStatusBack
             // 
-            label15.BackColor = Color.White;
-            label15.BorderStyle = BorderStyle.Fixed3D;
-            label15.Location = new Point(12, 420);
-            label15.Name = "label15";
-            label15.Size = new Size(396, 56);
-            label15.TabIndex = 9;
+            lblFuelStatusBack.BackColor = Color.White;
+            lblFuelStatusBack.BorderStyle = BorderStyle.Fixed3D;
+            lblFuelStatusBack.Enabled = false;
+            lblFuelStatusBack.Location = new Point(12, 420);
+            lblFuelStatusBack.Name = "lblFuelStatusBack";
+            lblFuelStatusBack.Size = new Size(396, 56);
+            lblFuelStatusBack.TabIndex = 9;
             // 
             // lblDisplayFuelType
             // 
             lblDisplayFuelType.AutoSize = true;
-            lblDisplayFuelType.Location = new Point(323, 386);
+            lblDisplayFuelType.Location = new Point(187, 386);
             lblDisplayFuelType.Name = "lblDisplayFuelType";
             lblDisplayFuelType.Size = new Size(64, 25);
             lblDisplayFuelType.TabIndex = 0;
@@ -345,7 +353,7 @@
             // lblDisplayPayload
             // 
             lblDisplayPayload.AutoSize = true;
-            lblDisplayPayload.Location = new Point(323, 346);
+            lblDisplayPayload.Location = new Point(187, 346);
             lblDisplayPayload.Name = "lblDisplayPayload";
             lblDisplayPayload.Size = new Size(64, 25);
             lblDisplayPayload.TabIndex = 0;
@@ -354,7 +362,7 @@
             // lblDisplayDriver
             // 
             lblDisplayDriver.AutoSize = true;
-            lblDisplayDriver.Location = new Point(323, 306);
+            lblDisplayDriver.Location = new Point(187, 306);
             lblDisplayDriver.Name = "lblDisplayDriver";
             lblDisplayDriver.Size = new Size(64, 25);
             lblDisplayDriver.TabIndex = 0;
@@ -363,7 +371,7 @@
             // lblDisplayType
             // 
             lblDisplayType.AutoSize = true;
-            lblDisplayType.Location = new Point(323, 266);
+            lblDisplayType.Location = new Point(187, 266);
             lblDisplayType.Name = "lblDisplayType";
             lblDisplayType.Size = new Size(64, 25);
             lblDisplayType.TabIndex = 0;
@@ -372,7 +380,7 @@
             // lblDisplayID
             // 
             lblDisplayID.AutoSize = true;
-            lblDisplayID.Location = new Point(323, 226);
+            lblDisplayID.Location = new Point(187, 226);
             lblDisplayID.Name = "lblDisplayID";
             lblDisplayID.Size = new Size(64, 25);
             lblDisplayID.TabIndex = 0;
@@ -383,9 +391,9 @@
             label8.AutoSize = true;
             label8.Location = new Point(9, 386);
             label8.Name = "label8";
-            label8.Size = new Size(130, 25);
+            label8.Size = new Size(90, 25);
             label8.TabIndex = 0;
-            label8.Text = "Fuel or Battery:";
+            label8.Text = "Fuel Type:";
             // 
             // label7
             // 
@@ -503,6 +511,7 @@
             btnManageFuel.TabIndex = 6;
             btnManageFuel.Text = "[Manage &Fuel/Battery]";
             btnManageFuel.UseVisualStyleBackColor = false;
+            btnManageFuel.Click += btnManageFuel_Click;
             // 
             // frmFleetDashboard
             // 
@@ -571,7 +580,7 @@
         private Label lblDisplayType;
         private Label lblDisplayID;
         private Button btnManageFuel;
-        private Label label15;
+        private Label lblFuelStatusBack;
         private Label label9;
         private Label label2;
         private PictureBox picDrone;

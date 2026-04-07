@@ -57,7 +57,7 @@
             lblVehicleDetails.Location = new Point(436, 48);
             lblVehicleDetails.Name = "lblVehicleDetails";
             lblVehicleDetails.Size = new Size(208, 54);
-            lblVehicleDetails.TabIndex = 1;
+            lblVehicleDetails.TabIndex = 0;
             lblVehicleDetails.Text = "[ Vehicle ]";
             // 
             // label2
@@ -67,7 +67,7 @@
             label2.Location = new Point(185, 115);
             label2.Name = "label2";
             label2.Size = new Size(235, 45);
-            label2.TabIndex = 2;
+            label2.TabIndex = 0;
             label2.Text = "Current Driver: ";
             // 
             // lblDriverSelection
@@ -77,7 +77,7 @@
             lblDriverSelection.Location = new Point(426, 115);
             lblDriverSelection.Name = "lblDriverSelection";
             lblDriverSelection.Size = new Size(98, 45);
-            lblDriverSelection.TabIndex = 3;
+            lblDriverSelection.TabIndex = 0;
             lblDriverSelection.Text = "None";
             // 
             // grpDriverSelection
@@ -89,7 +89,7 @@
             grpDriverSelection.Location = new Point(38, 177);
             grpDriverSelection.Name = "grpDriverSelection";
             grpDriverSelection.Size = new Size(606, 179);
-            grpDriverSelection.TabIndex = 4;
+            grpDriverSelection.TabIndex = 3;
             grpDriverSelection.TabStop = false;
             grpDriverSelection.Text = "Driver Selection";
             // 
@@ -101,8 +101,8 @@
             cboDrivers.Location = new Point(6, 82);
             cboDrivers.Name = "cboDrivers";
             cboDrivers.Size = new Size(581, 33);
-            cboDrivers.TabIndex = 1;
-            cboDrivers.Text = "Select and Available Driver form this list.";
+            cboDrivers.TabIndex = 0;
+            cboDrivers.Text = "Select and Available Driver from this list.";
             // 
             // label3
             // 
@@ -122,9 +122,10 @@
             btnConfirm.Location = new Point(38, 374);
             btnConfirm.Name = "btnConfirm";
             btnConfirm.Size = new Size(280, 79);
-            btnConfirm.TabIndex = 5;
+            btnConfirm.TabIndex = 1;
             btnConfirm.Text = "[Confrim Assignment]";
             btnConfirm.UseVisualStyleBackColor = false;
+            btnConfirm.Click += btnConfirm_Click;
             // 
             // btnCancel
             // 
@@ -134,9 +135,10 @@
             btnCancel.Location = new Point(364, 374);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(280, 79);
-            btnCancel.TabIndex = 6;
+            btnCancel.TabIndex = 2;
             btnCancel.Text = "[Cancel && Close]";
             btnCancel.UseVisualStyleBackColor = false;
+            btnCancel.Click += btnCancel_Click;
             // 
             // frmAssignDriver
             // 
@@ -154,6 +156,7 @@
             Name = "frmAssignDriver";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Driver Assignment Command - EcoLink Hub";
+            Load += frmAssignDriver_Load;
             grpDriverSelection.ResumeLayout(false);
             grpDriverSelection.PerformLayout();
             ResumeLayout(false);

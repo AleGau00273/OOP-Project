@@ -19,3 +19,4 @@ C:\Users\alexa\OneDrive\Documentos\OOP-Project\OOP-Project_Jonathan_Alex_Abdin\o
 C:\Users\alexa\OneDrive\Documentos\OOP-Project\OOP-Project_Jonathan_Alex_Abdin\obj\Debug\net9.0-windows\OOP_Project_Jonathan_Alex_Abdin.frmAssignDriver.resources
 C:\Users\alexa\OneDrive\Documentos\OOP-Project\OOP-Project_Jonathan_Alex_Abdin\obj\Debug\net9.0-windows\OOP_Project_Jonathan_Alex_Abdin.frmManageCargo.resources
 C:\Users\alexa\OneDrive\Documentos\OOP-Project\OOP-Project_Jonathan_Alex_Abdin\obj\Debug\net9.0-windows\OOP_Project_Jonathan_Alex_Abdin.frmManageFuel.resources
+C:\Users\alexa\OneDrive\Documentos\OOP-Project\OOP-Project_Jonathan_Alex_Abdin\bin\Debug\net9.0-windows\drivers.txt

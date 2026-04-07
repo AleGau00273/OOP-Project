@@ -82,7 +82,7 @@
             // 
             picEnergyIcon.BackColor = Color.FromArgb(252, 236, 197);
             picEnergyIcon.Image = (Image)resources.GetObject("picEnergyIcon.Image");
-            picEnergyIcon.Location = new Point(940, 12);
+            picEnergyIcon.Location = new Point(1082, 12);
             picEnergyIcon.Name = "picEnergyIcon";
             picEnergyIcon.Size = new Size(150, 150);
             picEnergyIcon.SizeMode = PictureBoxSizeMode.Zoom;
@@ -93,7 +93,7 @@
             // 
             picHydrogenIcon.BackColor = Color.FromArgb(252, 236, 197);
             picHydrogenIcon.Image = (Image)resources.GetObject("picHydrogenIcon.Image");
-            picHydrogenIcon.Location = new Point(940, 12);
+            picHydrogenIcon.Location = new Point(1082, 12);
             picHydrogenIcon.Name = "picHydrogenIcon";
             picHydrogenIcon.Size = new Size(150, 150);
             picHydrogenIcon.SizeMode = PictureBoxSizeMode.Zoom;
@@ -106,9 +106,9 @@
             lblStatus.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblStatus.Location = new Point(146, 185);
             lblStatus.Name = "lblStatus";
-            lblStatus.Size = new Size(416, 54);
+            lblStatus.Size = new Size(489, 54);
             lblStatus.TabIndex = 7;
-            lblStatus.Text = "Current Energy Levels:";
+            lblStatus.Text = "Current Fuel/Energy Level:";
             // 
             // prgEnergryLevel
             // 
@@ -137,7 +137,7 @@
             grpRefill.Size = new Size(788, 210);
             grpRefill.TabIndex = 10;
             grpRefill.TabStop = false;
-            grpRefill.Text = "Transfer Energy";
+            grpRefill.Text = "Transfer Fuel/Energy";
             // 
             // nudAmount
             // 
@@ -167,6 +167,7 @@
             btnRefill.TabIndex = 11;
             btnRefill.Text = "Initiate Transfer";
             btnRefill.UseVisualStyleBackColor = false;
+            btnRefill.Click += btnRefill_Click;
             // 
             // btnCancel
             // 
@@ -179,13 +180,14 @@
             btnCancel.TabIndex = 12;
             btnCancel.Text = "Disconnect && Close";
             btnCancel.UseVisualStyleBackColor = false;
+            btnCancel.Click += btnCancel_Click;
             // 
             // frmManageFuel
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(252, 236, 197);
-            ClientSize = new Size(1125, 709);
+            ClientSize = new Size(1251, 742);
             Controls.Add(btnCancel);
             Controls.Add(btnRefill);
             Controls.Add(grpRefill);
@@ -199,6 +201,7 @@
             Controls.Add(picHydrogenIcon);
             Name = "frmManageFuel";
             Text = "Energy & Refueling Command - EcoLink Hub";
+            Load += frmManageFuel_Load;
             ((System.ComponentModel.ISupportInitialize)picEnergyIcon).EndInit();
             ((System.ComponentModel.ISupportInitialize)picHydrogenIcon).EndInit();
             grpRefill.ResumeLayout(false);

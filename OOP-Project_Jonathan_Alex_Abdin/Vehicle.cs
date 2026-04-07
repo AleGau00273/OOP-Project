@@ -8,79 +8,100 @@ using System.Threading.Tasks;
 namespace OOP_Project_Jonathan_Alex_Abdin
 {
     // Creating Main Vehicle Class (Abstract)
-    public abstract class Vehicle
+    // Features: [F-01] (Abstract Base), [F-02] (Built-in Interface)
+    public abstract class Vehicle : IComparable<Vehicle>
     {
         // Properties and lists
-        List<ElectricVehicle> ElectricVehiclesList = new List<ElectricVehicle>();
-        List<HydrogenVehicle> HydrogenVehiclesList = new List<HydrogenVehicle>();
-
-        public string DriverName { get; set; }
-        public string VehicleID { get; set; }
+        public string DriverName { get; set; } = "Unassigned";
+        public string VehicleID { get; set; } = string.Empty;
         public double VehicleSize { get; set; }
         public double MaxCapacity { get; set; }
         public double CurrentWeightLoad { get; set; }
         public double CurrentSizeLoad { get; set; }
 
+        // [F-06] List to track loaded packages so they persist when reopening forms
+        public List<Package> LoadedPackages { get; set; } = new List<Package>();
+
+        public double EnergyLevel { get; set; }
+
+        protected static Random rand = new Random();
+
+        public Vehicle()
+        {
+            // Starting with a random energy level for realism
+            EnergyLevel = rand.Next(5, 101);
+        }
+
         // Methods
-        public void addPackage(Package pkg) 
+
+        // [F-01] Abstract method that derived classes must implement
+        public abstract void Refuel(double amount);
+
+        // [F-03] Method Overloading (Overload 1: Parameterless top-off)
+        public void Refuel()
         {
+            this.EnergyLevel = 100;
         }
-        public double getRemainingCapacity() {
-            return MaxCapacity - CurrentWeightLoad;
-        }
-        public double getRemainingSize() 
+
+        // [F-04] Operator Overloading (+) to combine Vehicle and Package
+        // [F-08] Exception Handling for capacity violations
+        public static Vehicle operator +(Vehicle v, Package p)
         {
-            return VehicleSize - CurrentSizeLoad;
+            if (v.CurrentWeightLoad + p.Weight > v.MaxCapacity)
+            {
+                throw new InvalidOperationException("This vehicle can't handle that much weight.");
+            }
+
+            v.CurrentWeightLoad += p.Weight;
+            v.CurrentSizeLoad += p.PackageSize;
+            v.LoadedPackages.Add(p);
+
+            return v;
         }
-    }
-    //Creating ElectricVehicle class 
-    public class ElectricVehicle : Vehicle 
-    {
-        // Properties
-        public double BatteryLevel { get; set; }
-        //Methods
-        public double checkBatteryLevel() 
+
+        // [F-02] IComparable implementation for sorting collections
+        public int CompareTo(Vehicle? other)
         {
-            return BatteryLevel;
+            if (other == null) return 1;
+            return this.MaxCapacity.CompareTo(other.MaxCapacity);
         }
-    }
-    //Creating HydrogenVehicle class 
-    public class HydrogenVehicle : Vehicle
-    {
-        // Properties
-        public double HydrogenLevel { get; set; }
-        //Methods
-        public double checkHydrogenLevel()
-        {
-            return HydrogenLevel;
-        }
+
+        public double getRemainingCapacity() => MaxCapacity - CurrentWeightLoad;
+        public double getRemainingSize() => VehicleSize - CurrentSizeLoad;
     }
 
-    //Creating Drone class (Sealed)
-    public sealed class Drone : ElectricVehicle 
+    // Creating ElectricVehicle class which inherits from Vehicle
+    // Features: [F-01] (Inheritance), [F-02] (Custom Interface Implementation)
+    public class ElectricVehicle : Vehicle, IEnergyConsumer
     {
-        // Methods
-        public bool checkAirSpace() 
+        // [F-03] Method Overriding
+        public override void Refuel(double amount)
         {
-            return true;
+            EnergyLevel += amount;
+            if (EnergyLevel > 100) EnergyLevel = 100;
         }
-    }
-    //Creating ElectricCar class (Sealed)
-    public sealed class ElectricCar : ElectricVehicle
-    {
+
+        public string GetFuelWarning() => EnergyLevel < 20 ? "Low Battery! Find a charging station." : "Battery Level Nominal.";
+        public void ConsumeEnergy(double amount) => EnergyLevel = Math.Max(0, EnergyLevel - amount);
     }
 
-    //Creating ElectricVan class (Sealed)
-    public sealed class ElectricVan : ElectricVehicle
+    // Creating HydrogenVehicle class which inherits from Vehicle
+    public class HydrogenVehicle : Vehicle, IEnergyConsumer
     {
+        public override void Refuel(double amount)
+        {
+            EnergyLevel += amount;
+            if (EnergyLevel > 100) EnergyLevel = 100;
+        }
+
+        public string GetFuelWarning() => EnergyLevel < 20 ? "Low Hydrogen! Refuel immediately." : "Hydrogen Pressure Nominal.";
+        public void ConsumeEnergy(double amount) => EnergyLevel = Math.Max(0, EnergyLevel - amount);
     }
 
-    public sealed class ElectricBike : ElectricVehicle 
-    {
-    }
-
-    //Creating HeavydutyHydrogenTruck class (Sealed)
-    public sealed class HeavydutyHydrogenTruck : HydrogenVehicle 
-    {
-    }
+    // [F-08] Sealed Classes to prevent further inheritance
+    public sealed class Drone : ElectricVehicle { public Drone() : base() { MaxCapacity = 5; } }
+    public sealed class ElectricCar : ElectricVehicle { public ElectricCar() : base() { MaxCapacity = 500; } }
+    public sealed class ElectricVan : ElectricVehicle { public ElectricVan() : base() { MaxCapacity = 1500; } }
+    public sealed class ElectricBike : ElectricVehicle { public ElectricBike() : base() { MaxCapacity = 50; } }
+    public sealed class HeavydutyHydrogenTruck : HydrogenVehicle { public HeavydutyHydrogenTruck() : base() { MaxCapacity = 5000; } }
 }
