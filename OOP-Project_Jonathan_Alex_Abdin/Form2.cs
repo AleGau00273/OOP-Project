@@ -53,7 +53,7 @@ namespace OOP_Project_Jonathan_Alex_Abdin
                 // If we are replacing an existing driver, they go back to the top of the pool
                 if (_selectedVehicle.DriverName != "Unassigned")
                 {
-                    FleetManager.AvailableDrivers.Insert(0, _selectedVehicle.DriverName);
+                        FleetManager.AvailableDrivers.Insert(0, _selectedVehicle.DriverName);
                 }
 
                 // Updating the vehicle object and removing the new driver from availability

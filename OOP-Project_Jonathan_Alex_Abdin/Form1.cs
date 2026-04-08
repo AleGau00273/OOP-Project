@@ -44,6 +44,51 @@ namespace OOP_Project_Jonathan_Alex_Abdin
             radCar.Checked = false;
             radVan.Checked = false;
             radTruck.Checked = false;
+
+
+            // Checking if the vehicle.txt file exists or no 
+            if (File.Exists("vehicles.txt"))
+            {
+                //Reading the file data
+                var lines = File.ReadAllLines("vehicles.txt");
+
+                foreach (var line in lines)
+                {
+                    var data = line.Split(" ");
+
+                    Vehicle v;
+
+                    //Switch case to determine the vehicle type
+                    switch (data[1])
+                    {
+                        case "ElectricCar": v = new ElectricCar(); break;
+                        case "Drone": v = new Drone(); break;
+                        case "ElectricVan": v = new ElectricVan(); break;
+                        case "ElectricBike": v = new ElectricBike(); break;
+                        case "HeavydutyHydrogenTruck": v = new HeavydutyHydrogenTruck(); break;
+                        default: continue;
+                    }
+
+                    v.VehicleID = data[0];
+                    v.MaxCapacity = double.Parse(data[2]);
+                    v.EnergyLevel = double.Parse(data[3]);
+                    
+                    if (data[4] == "Unassigned") 
+                    {
+                        v.DriverName = $"{data[4]}";
+                    }
+                    else { 
+
+                        v.DriverName = $"{data[4]} {data[5]}";
+                        FleetManager.AvailableDrivers.Remove(v.DriverName);
+                    }
+                    fleet.Add(v);
+                    lstFleet.Items.Add(v.VehicleID);
+
+                }
+
+                lblTotalCount.Text = $"Total Vehicles: {fleet.Count}";
+            }
         }
 
         // Setting up a variety of packages to demonstrate different vehicle load limits [F-06]
@@ -69,6 +114,7 @@ namespace OOP_Project_Jonathan_Alex_Abdin
         // Handling the logic for creating and registering new vehicles [F-01]
         private void btnRegister_Click(object sender, EventArgs e)
         {
+
             Vehicle? newVehicle = null;
             string prefix = "";
 
@@ -105,6 +151,8 @@ namespace OOP_Project_Jonathan_Alex_Abdin
                 // Refreshing the UI with the new registration data
                 lstFleet.Items.Add(newVehicle.VehicleID);
                 lblTotalCount.Text = $"Total Vehicles: {fleet.Count}";
+
+                SaveFleetToFile();
 
                 MessageBox.Show($"{newVehicle.VehicleID} registered!", "Success");
             }
@@ -246,6 +294,8 @@ namespace OOP_Project_Jonathan_Alex_Abdin
                     if (assignForm.ShowDialog() == DialogResult.OK)
                     {
                         lblDisplayDriver.Text = selected.DriverName;
+
+                        SaveFleetToFile();
                     }
                 }
             }
@@ -278,7 +328,7 @@ namespace OOP_Project_Jonathan_Alex_Abdin
                 // Returning the driver and all loaded cargo to the top of their respective pools [F-06]
                 if (toRemove.DriverName != "Unassigned")
                 {
-                    FleetManager.AvailableDrivers.Insert(0, toRemove.DriverName);
+                        FleetManager.AvailableDrivers.Insert(0, toRemove.DriverName);
                 }
 
                 foreach (Package pkg in toRemove.LoadedPackages)
@@ -288,6 +338,8 @@ namespace OOP_Project_Jonathan_Alex_Abdin
 
                 fleet.RemoveAt(lstFleet.SelectedIndex);
                 lstFleet.Items.RemoveAt(lstFleet.SelectedIndex);
+
+                SaveFleetToFile();
 
                 lblTotalCount.Text = $"Total Vehicles: {fleet.Count}";
                 grpVehicleDetails.Visible = false;
@@ -307,6 +359,20 @@ namespace OOP_Project_Jonathan_Alex_Abdin
                     fuelForm.ShowDialog();
                     lblFuelPercent.Text = $"{selected.EnergyLevel}%";
                     UpdateFuelStatus(selected.EnergyLevel);
+
+                    SaveFleetToFile();
+                }
+            }
+        }
+
+        //Saving vehicles data in the text file
+        private void SaveFleetToFile()
+        {
+            using (StreamWriter writer = new StreamWriter("vehicles.txt", false))
+            {
+                foreach (var v in fleet)
+                {
+                    writer.WriteLine($"{v.VehicleID} {v.GetType().Name} {v.MaxCapacity} {v.EnergyLevel} {v.DriverName}");
                 }
             }
         }
