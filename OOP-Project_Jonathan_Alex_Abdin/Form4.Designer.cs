@@ -200,6 +200,7 @@
             Controls.Add(picEnergyIcon);
             Controls.Add(picHydrogenIcon);
             Name = "frmManageFuel";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Energy & Refueling Command - EcoLink Hub";
             Load += frmManageFuel_Load;
             ((System.ComponentModel.ISupportInitialize)picEnergyIcon).EndInit();

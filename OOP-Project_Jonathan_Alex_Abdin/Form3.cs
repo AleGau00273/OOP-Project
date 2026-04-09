@@ -15,22 +15,22 @@ namespace OOP_Project_Jonathan_Alex_Abdin
     public partial class frmManageCargo : Form
     {
         // Properties and lists
-        private Vehicle _selectedVehicle;
-        private List<Package> _sessionPackages = new List<Package>();
+        private Vehicle selectedVehicle;
+        private List<Package> sessionPackages = new List<Package>();
 
         // Methods
 
         public frmManageCargo(Vehicle vehicle)
         {
             InitializeComponent();
-            _selectedVehicle = vehicle;
+            selectedVehicle = vehicle;
         }
 
         private void frmManageCargo_Load(object sender, EventArgs e)
         {
-            lblVehicleDetails.Text = _selectedVehicle.VehicleID;
+            lblVehicleDetails.Text = selectedVehicle.VehicleID;
             UpdateCargoDisplay();
-            UpdateVehicleImage(_selectedVehicle);
+            UpdateVehicleImage(selectedVehicle);
             RefreshVehicleCargoList();
             RefreshWarehouseList();
         }
@@ -47,15 +47,15 @@ namespace OOP_Project_Jonathan_Alex_Abdin
         private void RefreshVehicleCargoList()
         {
             lstVehicleCargo.Items.Clear();
-            foreach (var pkg in _selectedVehicle.LoadedPackages) lstVehicleCargo.Items.Add(GetPackageDisplayName(pkg));
+            foreach (var pkg in selectedVehicle.LoadedPackages) lstVehicleCargo.Items.Add(GetPackageDisplayName(pkg));
         }
 
         private void UpdateCargoDisplay()
         {
-            lblCurrentWeight.Text = $"{_selectedVehicle.CurrentWeightLoad}kg";
-            lblMaxWeight.Text = $"{_selectedVehicle.MaxCapacity}kg";
+            lblCurrentWeight.Text = $"{selectedVehicle.CurrentWeightLoad}kg";
+            lblMaxWeight.Text = $"{selectedVehicle.MaxCapacity}kg";
 
-            double percent = (_selectedVehicle.CurrentWeightLoad / _selectedVehicle.MaxCapacity) * 100;
+            double percent = (selectedVehicle.CurrentWeightLoad / selectedVehicle.MaxCapacity) * 100;
             label6.Text = $"({(int)percent}%)";
             prgCapacity.Value = (int)Math.Min(percent, 100);
         }
@@ -70,10 +70,10 @@ namespace OOP_Project_Jonathan_Alex_Abdin
             try
             {
                 // Using the overloaded + operator [F-04]
-                _selectedVehicle = _selectedVehicle + selectedPkg;
+                selectedVehicle = selectedVehicle + selectedPkg;
 
                 // Tracking the move for the cancel rollback logic
-                _sessionPackages.Add(selectedPkg);
+                sessionPackages.Add(selectedPkg);
                 frmFleetDashboard.Warehouse.RemoveAt(index);
 
                 RefreshVehicleCargoList();
@@ -91,14 +91,14 @@ namespace OOP_Project_Jonathan_Alex_Abdin
         {
             if (lstVehicleCargo.SelectedIndex == -1) return;
             int index = lstVehicleCargo.SelectedIndex;
-            Package pkgToRemove = _selectedVehicle.LoadedPackages[index];
+            Package pkgToRemove = selectedVehicle.LoadedPackages[index];
 
             // Reversing the loads manually and returning cargo to the top of the warehouse pool
-            _selectedVehicle.CurrentWeightLoad -= pkgToRemove.Weight;
-            _selectedVehicle.CurrentSizeLoad -= pkgToRemove.PackageSize;
+            selectedVehicle.CurrentWeightLoad -= pkgToRemove.Weight;
+            selectedVehicle.CurrentSizeLoad -= pkgToRemove.PackageSize;
 
             frmFleetDashboard.Warehouse.Insert(0, pkgToRemove);
-            _selectedVehicle.LoadedPackages.RemoveAt(index);
+            selectedVehicle.LoadedPackages.RemoveAt(index);
 
             RefreshVehicleCargoList();
             RefreshWarehouseList();
@@ -115,12 +115,12 @@ namespace OOP_Project_Jonathan_Alex_Abdin
         private void btnCancel_Click(object sender, EventArgs e)
         {
             // Reverse loop to safely unload items added in this window
-            for (int i = _sessionPackages.Count - 1; i >= 0; i--)
+            for (int i = sessionPackages.Count - 1; i >= 0; i--)
             {
-                Package pkg = _sessionPackages[i];
-                _selectedVehicle.CurrentWeightLoad -= pkg.Weight;
-                _selectedVehicle.CurrentSizeLoad -= pkg.PackageSize;
-                _selectedVehicle.LoadedPackages.Remove(pkg);
+                Package pkg = sessionPackages[i];
+                selectedVehicle.CurrentWeightLoad -= pkg.Weight;
+                selectedVehicle.CurrentSizeLoad -= pkg.PackageSize;
+                selectedVehicle.LoadedPackages.Remove(pkg);
                 frmFleetDashboard.Warehouse.Add(pkg);
             }
             this.DialogResult = DialogResult.Cancel;

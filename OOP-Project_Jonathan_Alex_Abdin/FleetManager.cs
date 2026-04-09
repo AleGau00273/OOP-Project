@@ -15,14 +15,14 @@ namespace OOP_Project_Jonathan_Alex_Abdin
 
         // [F-08] Static list for central data management
         public static List<string> AvailableDrivers = new List<string>();
-        private static string _filePath = "drivers.txt";
+        private static string filePath = "drivers.txt";
 
         // Methods
 
         // [F-07] Data Storage & Persistence (Reading from text file)
         public static void InitializeDriverPool()
         {
-            string fullPath = Path.Combine(AppContext.BaseDirectory, _filePath);
+            string fullPath = Path.Combine(AppContext.BaseDirectory, filePath);
 
             if (File.Exists(fullPath))
             {

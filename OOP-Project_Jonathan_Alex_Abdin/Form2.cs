@@ -15,7 +15,7 @@ namespace OOP_Project_Jonathan_Alex_Abdin
     public partial class frmAssignDriver : Form
     {
         // Properties and lists
-        private Vehicle _selectedVehicle;
+        private Vehicle selectedVehicle;
 
         // Methods
 
@@ -23,14 +23,14 @@ namespace OOP_Project_Jonathan_Alex_Abdin
         public frmAssignDriver(Vehicle vehicleToEdit)
         {
             InitializeComponent();
-            _selectedVehicle = vehicleToEdit;
+            selectedVehicle = vehicleToEdit;
         }
 
         private void frmAssignDriver_Load(object sender, EventArgs e)
         {
             // Displaying current vehicle details passed from Form 1 (frmFleetDashboard)
-            lblVehicleDetails.Text = _selectedVehicle.VehicleID;
-            lblDriverSelection.Text = _selectedVehicle.DriverName;
+            lblVehicleDetails.Text = selectedVehicle.VehicleID;
+            lblDriverSelection.Text = selectedVehicle.DriverName;
 
             // Loading the combo box with drivers from our static pool [F-08]
             cboDrivers.Items.Clear();
@@ -51,13 +51,13 @@ namespace OOP_Project_Jonathan_Alex_Abdin
                 string newDriver = cboDrivers.SelectedItem?.ToString() ?? "Unassigned";
 
                 // If we are replacing an existing driver, they go back to the top of the pool
-                if (_selectedVehicle.DriverName != "Unassigned")
+                if (selectedVehicle.DriverName != "Unassigned")
                 {
-                        FleetManager.AvailableDrivers.Insert(0, _selectedVehicle.DriverName);
+                    FleetManager.AvailableDrivers.Insert(0, selectedVehicle.DriverName);
                 }
 
                 // Updating the vehicle object and removing the new driver from availability
-                _selectedVehicle.DriverName = newDriver;
+                selectedVehicle.DriverName = newDriver;
                 FleetManager.AvailableDrivers.Remove(newDriver);
 
                 this.DialogResult = DialogResult.OK;

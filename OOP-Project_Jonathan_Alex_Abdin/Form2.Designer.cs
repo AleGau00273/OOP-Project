@@ -123,7 +123,7 @@
             btnConfirm.Name = "btnConfirm";
             btnConfirm.Size = new Size(280, 79);
             btnConfirm.TabIndex = 1;
-            btnConfirm.Text = "[Confrim Assignment]";
+            btnConfirm.Text = "[Confirm Assignment]";
             btnConfirm.UseVisualStyleBackColor = false;
             btnConfirm.Click += btnConfirm_Click;
             // 
