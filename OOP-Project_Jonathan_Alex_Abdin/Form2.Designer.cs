@@ -33,7 +33,11 @@
             label2 = new Label();
             lblDriverSelection = new Label();
             grpDriverSelection = new GroupBox();
+            txtDriverName = new TextBox();
+            label4 = new Label();
+            btnRemoveDriver = new Button();
             cboDrivers = new ComboBox();
+            btnAddDriver = new Button();
             label3 = new Label();
             btnConfirm = new Button();
             btnCancel = new Button();
@@ -44,9 +48,10 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(38, 48);
+            label1.Location = new Point(30, 38);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(382, 54);
+            label1.Size = new Size(320, 46);
             label1.TabIndex = 0;
             label1.Text = "Assigning Driver to: ";
             // 
@@ -54,9 +59,10 @@
             // 
             lblVehicleDetails.AutoSize = true;
             lblVehicleDetails.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblVehicleDetails.Location = new Point(436, 48);
+            lblVehicleDetails.Location = new Point(349, 38);
+            lblVehicleDetails.Margin = new Padding(2, 0, 2, 0);
             lblVehicleDetails.Name = "lblVehicleDetails";
-            lblVehicleDetails.Size = new Size(208, 54);
+            lblVehicleDetails.Size = new Size(177, 46);
             lblVehicleDetails.TabIndex = 0;
             lblVehicleDetails.Text = "[ Vehicle ]";
             // 
@@ -64,9 +70,10 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(185, 115);
+            label2.Location = new Point(148, 92);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(235, 45);
+            label2.Size = new Size(196, 37);
             label2.TabIndex = 0;
             label2.Text = "Current Driver: ";
             // 
@@ -74,43 +81,100 @@
             // 
             lblDriverSelection.AutoSize = true;
             lblDriverSelection.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblDriverSelection.Location = new Point(426, 115);
+            lblDriverSelection.Location = new Point(341, 92);
+            lblDriverSelection.Margin = new Padding(2, 0, 2, 0);
             lblDriverSelection.Name = "lblDriverSelection";
-            lblDriverSelection.Size = new Size(98, 45);
+            lblDriverSelection.Size = new Size(82, 37);
             lblDriverSelection.TabIndex = 0;
             lblDriverSelection.Text = "None";
             // 
             // grpDriverSelection
             // 
+            grpDriverSelection.Controls.Add(txtDriverName);
+            grpDriverSelection.Controls.Add(label4);
+            grpDriverSelection.Controls.Add(btnRemoveDriver);
             grpDriverSelection.Controls.Add(cboDrivers);
+            grpDriverSelection.Controls.Add(btnAddDriver);
             grpDriverSelection.Controls.Add(label3);
             grpDriverSelection.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             grpDriverSelection.ForeColor = SystemColors.ControlText;
-            grpDriverSelection.Location = new Point(38, 177);
+            grpDriverSelection.Location = new Point(30, 142);
+            grpDriverSelection.Margin = new Padding(2);
             grpDriverSelection.Name = "grpDriverSelection";
-            grpDriverSelection.Size = new Size(606, 179);
+            grpDriverSelection.Padding = new Padding(2);
+            grpDriverSelection.Size = new Size(502, 229);
             grpDriverSelection.TabIndex = 3;
             grpDriverSelection.TabStop = false;
             grpDriverSelection.Text = "Driver Selection";
+            // 
+            // txtDriverName
+            // 
+            txtDriverName.BorderStyle = BorderStyle.FixedSingle;
+            txtDriverName.Location = new Point(147, 121);
+            txtDriverName.Name = "txtDriverName";
+            txtDriverName.Size = new Size(349, 34);
+            txtDriverName.TabIndex = 7;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(15, 121);
+            label4.Name = "label4";
+            label4.Size = new Size(126, 28);
+            label4.TabIndex = 6;
+            label4.Text = "Driver Name:";
+            // 
+            // btnRemoveDriver
+            // 
+            btnRemoveDriver.BackColor = Color.FromArgb(192, 0, 0);
+            btnRemoveDriver.FlatAppearance.BorderColor = Color.Black;
+            btnRemoveDriver.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnRemoveDriver.FlatStyle = FlatStyle.Flat;
+            btnRemoveDriver.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            btnRemoveDriver.ForeColor = SystemColors.ButtonFace;
+            btnRemoveDriver.Location = new Point(272, 161);
+            btnRemoveDriver.Name = "btnRemoveDriver";
+            btnRemoveDriver.Size = new Size(224, 63);
+            btnRemoveDriver.TabIndex = 5;
+            btnRemoveDriver.Text = "[Remove Driver]";
+            btnRemoveDriver.UseVisualStyleBackColor = false;
+            btnRemoveDriver.Click += btnRemoveDriver_Click;
             // 
             // cboDrivers
             // 
             cboDrivers.BackColor = Color.White;
             cboDrivers.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cboDrivers.FormattingEnabled = true;
-            cboDrivers.Location = new Point(6, 82);
+            cboDrivers.Location = new Point(5, 66);
+            cboDrivers.Margin = new Padding(2);
             cboDrivers.Name = "cboDrivers";
-            cboDrivers.Size = new Size(581, 33);
+            cboDrivers.Size = new Size(491, 28);
             cboDrivers.TabIndex = 0;
             cboDrivers.Text = "Select and Available Driver from this list.";
+            // 
+            // btnAddDriver
+            // 
+            btnAddDriver.BackColor = Color.FromArgb(0, 192, 0);
+            btnAddDriver.FlatAppearance.BorderColor = Color.Black;
+            btnAddDriver.FlatStyle = FlatStyle.Flat;
+            btnAddDriver.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            btnAddDriver.ForeColor = SystemColors.ButtonHighlight;
+            btnAddDriver.Location = new Point(5, 161);
+            btnAddDriver.Name = "btnAddDriver";
+            btnAddDriver.Size = new Size(224, 63);
+            btnAddDriver.TabIndex = 4;
+            btnAddDriver.Text = "[Add Driver]";
+            btnAddDriver.UseVisualStyleBackColor = false;
+            btnAddDriver.Click += btnAddDriver_Click;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(6, 41);
+            label3.Location = new Point(5, 33);
+            label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(246, 38);
+            label3.Size = new Size(214, 32);
             label3.TabIndex = 0;
             label3.Text = "Available Drivers:";
             // 
@@ -119,9 +183,10 @@
             btnConfirm.BackColor = Color.FromArgb(52, 152, 219);
             btnConfirm.FlatStyle = FlatStyle.Popup;
             btnConfirm.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnConfirm.Location = new Point(38, 374);
+            btnConfirm.Location = new Point(35, 375);
+            btnConfirm.Margin = new Padding(2);
             btnConfirm.Name = "btnConfirm";
-            btnConfirm.Size = new Size(280, 79);
+            btnConfirm.Size = new Size(224, 63);
             btnConfirm.TabIndex = 1;
             btnConfirm.Text = "[Confrim Assignment]";
             btnConfirm.UseVisualStyleBackColor = false;
@@ -132,9 +197,10 @@
             btnCancel.BackColor = Color.FromArgb(213, 216, 220);
             btnCancel.FlatStyle = FlatStyle.Popup;
             btnCancel.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            btnCancel.Location = new Point(364, 374);
+            btnCancel.Location = new Point(302, 375);
+            btnCancel.Margin = new Padding(2);
             btnCancel.Name = "btnCancel";
-            btnCancel.Size = new Size(280, 79);
+            btnCancel.Size = new Size(224, 63);
             btnCancel.TabIndex = 2;
             btnCancel.Text = "[Cancel && Close]";
             btnCancel.UseVisualStyleBackColor = false;
@@ -142,10 +208,10 @@
             // 
             // frmAssignDriver
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(174, 214, 241);
-            ClientSize = new Size(708, 515);
+            ClientSize = new Size(562, 449);
             Controls.Add(btnCancel);
             Controls.Add(btnConfirm);
             Controls.Add(grpDriverSelection);
@@ -153,6 +219,7 @@
             Controls.Add(label2);
             Controls.Add(lblVehicleDetails);
             Controls.Add(label1);
+            Margin = new Padding(2);
             Name = "frmAssignDriver";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Driver Assignment Command - EcoLink Hub";
@@ -174,5 +241,9 @@
         private Button btnConfirm;
         private Button btnCancel;
         private Label label3;
+        private Button btnAddDriver;
+        private Button btnRemoveDriver;
+        private TextBox txtDriverName;
+        private Label label4;
     }
 }
