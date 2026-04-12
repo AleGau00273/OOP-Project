@@ -1,7 +1,15 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 C-66170 ElectricCar 500 94 Memphis Raines
 =======
 T-69130 HeavydutyHydrogenTruck 5000 95 Unassigned
 C-46458 ElectricCar 500 100 Unassigned
 V-75517 ElectricVan 1500 21 Han Solo
+>>>>>>> Stashed changes
+=======
+C-95327 ElectricCar 500 31 Dominic Toretto
+V-28744 ElectricVan 1500 24 ad ad
+T-52117 HeavydutyHydrogenTruck 5000 53 Max Rockatansky
+T-10611 HeavydutyHydrogenTruck 5000 62 Memphis Raines
+B-78408 ElectricBike 50 10 Unassigned
 >>>>>>> Stashed changes

@@ -16,7 +16,13 @@ namespace OOP_Project_Jonathan_Alex_Abdin
     {
         List<String> drivers = FleetManager.AvailableDrivers;
         // Properties and lists
+<<<<<<< Updated upstream
         private Vehicle _selectedVehicle;
+=======
+        List<String> drivers = FleetManager.AvailableDrivers;
+
+        private Vehicle selectedVehicle;
+>>>>>>> Stashed changes
 
         // Methods
 
@@ -93,13 +99,21 @@ namespace OOP_Project_Jonathan_Alex_Abdin
             {
                 MessageBox.Show("This driver already exists.");
             }
+<<<<<<< Updated upstream
             else {
+=======
+            else
+            {
+>>>>>>> Stashed changes
                 drivers.Add(driverName);
                 cboDrivers.Items.Add($"{driverName}");
                 SaveDriversToFile();
                 MessageBox.Show("Driver added successfully");
             }
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
         }
 
         private void btnRemoveDriver_Click(object sender, EventArgs e)
@@ -109,9 +123,15 @@ namespace OOP_Project_Jonathan_Alex_Abdin
             {
                 MessageBox.Show("Please enter driver name.");
             }
+<<<<<<< Updated upstream
             else if (driverName.Split(' ', StringSplitOptions.RemoveEmptyEntries).Length < 2)
             {
                 MessageBox.Show("Please enter full name (first and last).");
+=======
+            else if (driverName.Trim().Split(' ').Length < 2)
+            {
+                MessageBox.Show("Please enter full name.");
+>>>>>>> Stashed changes
             }
             else if (!cboDrivers.Items.Contains(driverName))
             {
@@ -125,8 +145,12 @@ namespace OOP_Project_Jonathan_Alex_Abdin
                 MessageBox.Show("Driver removed successfully");
             }
         }
+<<<<<<< Updated upstream
 
         private void SaveDriversToFile() 
+=======
+        private void SaveDriversToFile()
+>>>>>>> Stashed changes
         {
             using (StreamWriter writer = new StreamWriter("drivers.txt", false))
             {

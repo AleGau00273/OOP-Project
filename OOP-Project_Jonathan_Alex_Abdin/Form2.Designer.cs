@@ -36,6 +36,10 @@
             txtDriverName = new TextBox();
             label4 = new Label();
             btnRemoveDriver = new Button();
+<<<<<<< Updated upstream
+=======
+            btnAddDriver = new Button();
+>>>>>>> Stashed changes
             cboDrivers = new ComboBox();
             btnAddDriver = new Button();
             label3 = new Label();
@@ -93,41 +97,68 @@
             grpDriverSelection.Controls.Add(txtDriverName);
             grpDriverSelection.Controls.Add(label4);
             grpDriverSelection.Controls.Add(btnRemoveDriver);
+<<<<<<< Updated upstream
+=======
+            grpDriverSelection.Controls.Add(btnAddDriver);
+>>>>>>> Stashed changes
             grpDriverSelection.Controls.Add(cboDrivers);
             grpDriverSelection.Controls.Add(btnAddDriver);
             grpDriverSelection.Controls.Add(label3);
             grpDriverSelection.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             grpDriverSelection.ForeColor = SystemColors.ControlText;
+<<<<<<< Updated upstream
             grpDriverSelection.Location = new Point(30, 142);
             grpDriverSelection.Margin = new Padding(2);
             grpDriverSelection.Name = "grpDriverSelection";
             grpDriverSelection.Padding = new Padding(2);
             grpDriverSelection.Size = new Size(502, 229);
+=======
+            grpDriverSelection.Location = new Point(11, 142);
+            grpDriverSelection.Margin = new Padding(2);
+            grpDriverSelection.Name = "grpDriverSelection";
+            grpDriverSelection.Padding = new Padding(2);
+            grpDriverSelection.Size = new Size(515, 227);
+>>>>>>> Stashed changes
             grpDriverSelection.TabIndex = 3;
             grpDriverSelection.TabStop = false;
             grpDriverSelection.Text = "Driver Selection";
             // 
             // txtDriverName
             // 
+<<<<<<< Updated upstream
             txtDriverName.BorderStyle = BorderStyle.FixedSingle;
             txtDriverName.Location = new Point(147, 121);
             txtDriverName.Name = "txtDriverName";
             txtDriverName.Size = new Size(349, 34);
             txtDriverName.TabIndex = 7;
+=======
+            txtDriverName.Location = new Point(165, 105);
+            txtDriverName.Name = "txtDriverName";
+            txtDriverName.Size = new Size(339, 34);
+            txtDriverName.TabIndex = 4;
+>>>>>>> Stashed changes
             // 
             // label4
             // 
             label4.AutoSize = true;
+<<<<<<< Updated upstream
             label4.Location = new Point(15, 121);
             label4.Name = "label4";
             label4.Size = new Size(126, 28);
             label4.TabIndex = 6;
+=======
+            label4.Location = new Point(14, 105);
+            label4.Name = "label4";
+            label4.Size = new Size(126, 28);
+            label4.TabIndex = 3;
+>>>>>>> Stashed changes
             label4.Text = "Driver Name:";
             // 
             // btnRemoveDriver
             // 
             btnRemoveDriver.BackColor = Color.FromArgb(192, 0, 0);
             btnRemoveDriver.FlatAppearance.BorderColor = Color.Black;
+<<<<<<< Updated upstream
             btnRemoveDriver.FlatAppearance.MouseDownBackColor = Color.Transparent;
             btnRemoveDriver.FlatStyle = FlatStyle.Flat;
             btnRemoveDriver.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
@@ -136,19 +167,53 @@
             btnRemoveDriver.Name = "btnRemoveDriver";
             btnRemoveDriver.Size = new Size(224, 63);
             btnRemoveDriver.TabIndex = 5;
+=======
+            btnRemoveDriver.FlatStyle = FlatStyle.Flat;
+            btnRemoveDriver.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            btnRemoveDriver.ForeColor = SystemColors.ControlLightLight;
+            btnRemoveDriver.Location = new Point(280, 159);
+            btnRemoveDriver.Name = "btnRemoveDriver";
+            btnRemoveDriver.Size = new Size(224, 63);
+            btnRemoveDriver.TabIndex = 2;
+>>>>>>> Stashed changes
             btnRemoveDriver.Text = "[Remove Driver]";
             btnRemoveDriver.UseVisualStyleBackColor = false;
             btnRemoveDriver.Click += btnRemoveDriver_Click;
             // 
+<<<<<<< Updated upstream
+=======
+            // btnAddDriver
+            // 
+            btnAddDriver.BackColor = Color.FromArgb(0, 192, 0);
+            btnAddDriver.FlatAppearance.BorderColor = Color.Black;
+            btnAddDriver.FlatStyle = FlatStyle.Flat;
+            btnAddDriver.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            btnAddDriver.ForeColor = SystemColors.ControlLightLight;
+            btnAddDriver.Location = new Point(14, 159);
+            btnAddDriver.Name = "btnAddDriver";
+            btnAddDriver.Size = new Size(224, 63);
+            btnAddDriver.TabIndex = 1;
+            btnAddDriver.Text = "Add Driver";
+            btnAddDriver.UseVisualStyleBackColor = false;
+            btnAddDriver.Click += btnAddDriver_Click;
+            // 
+>>>>>>> Stashed changes
             // cboDrivers
             // 
             cboDrivers.BackColor = Color.White;
             cboDrivers.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cboDrivers.FormattingEnabled = true;
+<<<<<<< Updated upstream
             cboDrivers.Location = new Point(5, 66);
             cboDrivers.Margin = new Padding(2);
             cboDrivers.Name = "cboDrivers";
             cboDrivers.Size = new Size(491, 28);
+=======
+            cboDrivers.Location = new Point(14, 66);
+            cboDrivers.Margin = new Padding(2);
+            cboDrivers.Name = "cboDrivers";
+            cboDrivers.Size = new Size(490, 28);
+>>>>>>> Stashed changes
             cboDrivers.TabIndex = 0;
             cboDrivers.Text = "Select and Available Driver from this list.";
             // 
@@ -171,7 +236,11 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+<<<<<<< Updated upstream
             label3.Location = new Point(5, 33);
+=======
+            label3.Location = new Point(14, 32);
+>>>>>>> Stashed changes
             label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
             label3.Size = new Size(214, 32);
@@ -183,7 +252,11 @@
             btnConfirm.BackColor = Color.FromArgb(52, 152, 219);
             btnConfirm.FlatStyle = FlatStyle.Popup;
             btnConfirm.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+<<<<<<< Updated upstream
             btnConfirm.Location = new Point(35, 375);
+=======
+            btnConfirm.Location = new Point(25, 373);
+>>>>>>> Stashed changes
             btnConfirm.Margin = new Padding(2);
             btnConfirm.Name = "btnConfirm";
             btnConfirm.Size = new Size(224, 63);
@@ -197,7 +270,11 @@
             btnCancel.BackColor = Color.FromArgb(213, 216, 220);
             btnCancel.FlatStyle = FlatStyle.Popup;
             btnCancel.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+<<<<<<< Updated upstream
             btnCancel.Location = new Point(302, 375);
+=======
+            btnCancel.Location = new Point(291, 373);
+>>>>>>> Stashed changes
             btnCancel.Margin = new Padding(2);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(224, 63);
@@ -211,7 +288,11 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(174, 214, 241);
+<<<<<<< Updated upstream
             ClientSize = new Size(562, 449);
+=======
+            ClientSize = new Size(566, 447);
+>>>>>>> Stashed changes
             Controls.Add(btnCancel);
             Controls.Add(btnConfirm);
             Controls.Add(grpDriverSelection);
@@ -241,8 +322,13 @@
         private Button btnConfirm;
         private Button btnCancel;
         private Label label3;
+<<<<<<< Updated upstream
         private Button btnAddDriver;
         private Button btnRemoveDriver;
+=======
+        private Button btnRemoveDriver;
+        private Button btnAddDriver;
+>>>>>>> Stashed changes
         private TextBox txtDriverName;
         private Label label4;
     }
