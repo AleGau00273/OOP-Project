@@ -54,21 +54,18 @@ namespace OOP_Project_Jonathan_Alex_Abdin
                 // If we are replacing an existing driver, they go back to the top of the pool
                 if (_selectedVehicle.DriverName != "Unassigned")
                 {
-<<<<<<< Updated upstream
                         FleetManager.AvailableDrivers.Insert(0, _selectedVehicle.DriverName);
                 }
 
                 // Updating the vehicle object and removing the new driver from availability
                 _selectedVehicle.DriverName = newDriver;
                 FleetManager.AvailableDrivers.Remove(newDriver);
-=======
                     drivers.Insert(0, selectedVehicle.DriverName);
                 }
 
                 // Updating the vehicle object and removing the new driver from availability
                 selectedVehicle.DriverName = newDriver;
                 drivers.Remove(newDriver);
->>>>>>> Stashed changes
 
                 this.DialogResult = DialogResult.OK;
                 this.Close();
