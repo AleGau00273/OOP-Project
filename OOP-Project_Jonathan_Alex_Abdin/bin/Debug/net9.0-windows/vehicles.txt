@@ -1,7 +1,0 @@
-<<<<<<< Updated upstream
-C-66170 ElectricCar 500 94 Memphis Raines
-=======
-T-69130 HeavydutyHydrogenTruck 5000 95 Unassigned
-C-46458 ElectricCar 500 100 Unassigned
-V-75517 ElectricVan 1500 21 Han Solo
->>>>>>> Stashed changes
