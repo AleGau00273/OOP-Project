@@ -12,8 +12,8 @@ namespace OOP_Project_Jonathan_Alex_Abdin
     {
         // Properties and lists
         // [F-05] Private backing fields
-        private double _weight;
-        private double _packageSize;
+        private double weight;
+        private double packageSize;
 
         public string PackageID { get; set; }
         public string Description { get; set; }
@@ -21,14 +21,14 @@ namespace OOP_Project_Jonathan_Alex_Abdin
         // [F-05] Public Properties with validation logic
         public double Weight
         {
-            get => _weight;
-            set => _weight = (value < 0) ? 0 : value;
+            get => weight;
+            set => weight = (value < 0) ? 0 : value;
         }
 
         public double PackageSize
         {
-            get => _packageSize;
-            set => _packageSize = (value < 0) ? 0 : value;
+            get => packageSize;
+            set => packageSize = (value < 0) ? 0 : value;
         }
 
         // Methods

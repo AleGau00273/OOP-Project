@@ -14,15 +14,9 @@ namespace OOP_Project_Jonathan_Alex_Abdin
     // Features: [F-05], [F-07], [F-08]
     public partial class frmAssignDriver : Form
     {
-        List<String> drivers = FleetManager.AvailableDrivers;
         // Properties and lists
-<<<<<<< Updated upstream
-        private Vehicle _selectedVehicle;
-=======
         List<String> drivers = FleetManager.AvailableDrivers;
-
         private Vehicle selectedVehicle;
->>>>>>> Stashed changes
 
         // Methods
 
@@ -30,14 +24,14 @@ namespace OOP_Project_Jonathan_Alex_Abdin
         public frmAssignDriver(Vehicle vehicleToEdit)
         {
             InitializeComponent();
-            _selectedVehicle = vehicleToEdit;
+            selectedVehicle = vehicleToEdit;
         }
 
         private void frmAssignDriver_Load(object sender, EventArgs e)
         {
             // Displaying current vehicle details passed from Form 1 (frmFleetDashboard)
-            lblVehicleDetails.Text = _selectedVehicle.VehicleID;
-            lblDriverSelection.Text = _selectedVehicle.DriverName;
+            lblVehicleDetails.Text = selectedVehicle.VehicleID;
+            lblDriverSelection.Text = selectedVehicle.DriverName;
 
             // Loading the combo box with drivers from our static pool [F-08]
             cboDrivers.Items.Clear();
@@ -58,14 +52,8 @@ namespace OOP_Project_Jonathan_Alex_Abdin
                 string newDriver = cboDrivers.SelectedItem?.ToString() ?? "Unassigned";
 
                 // If we are replacing an existing driver, they go back to the top of the pool
-                if (_selectedVehicle.DriverName != "Unassigned")
+                if (selectedVehicle.DriverName != "Unassigned")
                 {
-                        FleetManager.AvailableDrivers.Insert(0, _selectedVehicle.DriverName);
-                }
-
-                // Updating the vehicle object and removing the new driver from availability
-                _selectedVehicle.DriverName = newDriver;
-                FleetManager.AvailableDrivers.Remove(newDriver);
                     drivers.Insert(0, selectedVehicle.DriverName);
                 }
 
@@ -83,7 +71,6 @@ namespace OOP_Project_Jonathan_Alex_Abdin
             this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
-
         private void btnAddDriver_Click(object sender, EventArgs e)
         {
             string driverName = txtDriverName.Text;
@@ -99,21 +86,14 @@ namespace OOP_Project_Jonathan_Alex_Abdin
             {
                 MessageBox.Show("This driver already exists.");
             }
-<<<<<<< Updated upstream
-            else {
-=======
             else
             {
->>>>>>> Stashed changes
                 drivers.Add(driverName);
                 cboDrivers.Items.Add($"{driverName}");
                 SaveDriversToFile();
                 MessageBox.Show("Driver added successfully");
             }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
         }
 
         private void btnRemoveDriver_Click(object sender, EventArgs e)
@@ -123,15 +103,9 @@ namespace OOP_Project_Jonathan_Alex_Abdin
             {
                 MessageBox.Show("Please enter driver name.");
             }
-<<<<<<< Updated upstream
             else if (driverName.Split(' ', StringSplitOptions.RemoveEmptyEntries).Length < 2)
             {
                 MessageBox.Show("Please enter full name (first and last).");
-=======
-            else if (driverName.Trim().Split(' ').Length < 2)
-            {
-                MessageBox.Show("Please enter full name.");
->>>>>>> Stashed changes
             }
             else if (!cboDrivers.Items.Contains(driverName))
             {
@@ -145,12 +119,8 @@ namespace OOP_Project_Jonathan_Alex_Abdin
                 MessageBox.Show("Driver removed successfully");
             }
         }
-<<<<<<< Updated upstream
 
-        private void SaveDriversToFile() 
-=======
         private void SaveDriversToFile()
->>>>>>> Stashed changes
         {
             using (StreamWriter writer = new StreamWriter("drivers.txt", false))
             {

@@ -135,7 +135,7 @@ namespace OOP_Project_Jonathan_Alex_Abdin
                 do
                 {
                     isDuplicate = false;
-                    int randomNumber = idGen.Next(10000, 100000);
+                    int randomNumber = idGen.Next(10000, 99999);
                     finalID = prefix + randomNumber.ToString();
 
                     foreach (Vehicle v in fleet)
@@ -365,15 +365,28 @@ namespace OOP_Project_Jonathan_Alex_Abdin
             }
         }
 
-        //Saving vehicles data in the text file
+        // [F-08] Saving vehicles data with error handling to prevent application crashes
         private void SaveFleetToFile()
         {
-            using (StreamWriter writer = new StreamWriter("vehicles.txt", false))
+            try
             {
-                foreach (var v in fleet)
+                using (StreamWriter writer = new StreamWriter("vehicles.txt", false))
                 {
-                    writer.WriteLine($"{v.VehicleID} {v.GetType().Name} {v.MaxCapacity} {v.EnergyLevel} {v.DriverName}");
+                    foreach (var v in fleet)
+                    {
+                        writer.WriteLine($"{v.VehicleID} {v.GetType().Name} {v.MaxCapacity} {v.EnergyLevel} {v.DriverName}");
+                    }
                 }
+            }
+            catch (IOException ex)
+            {
+                // Notifies the user if the file cannot be accessed (for example, file is open in another program)
+                MessageBox.Show($"Data Error: Could not save fleet. {ex.Message}", "File Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                // Catch for any other unexpected system errors
+                MessageBox.Show($"An unexpected error occurred: {ex.Message}", "System Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

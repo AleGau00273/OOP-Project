@@ -314,6 +314,7 @@
             Controls.Add(picVan);
             Controls.Add(picTruck);
             Name = "frmManageCargo";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Cargo Loading Management - EcoLink Hub";
             Load += frmManageCargo_Load;
             ((System.ComponentModel.ISupportInitialize)picBike).EndInit();
