@@ -1,10 +1,10 @@
-﻿Jack Burton
-Max Rockatansky
-Han Solo
-Dominic Toretto
 Frank Martin
-Ellen Ripley
+Max Rockatansky
 Memphis Raines
+Dominic Toretto
+Jack Burton
+Han Solo
+Ellen Ripley
 Ryan Gosling
 Neal Page
 Lincoln Hawk
