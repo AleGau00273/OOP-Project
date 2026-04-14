@@ -122,12 +122,25 @@ namespace OOP_Project_Jonathan_Alex_Abdin
         }
         private void SaveDriversToFile()
         {
-            using (StreamWriter writer = new StreamWriter("drivers.txt", false))
+            try
             {
-                foreach (var d in drivers)
+                using (StreamWriter writer = new StreamWriter("drivers.txt", false))
                 {
-                    writer.WriteLine($"{d}");
+                    foreach (var d in drivers)
+                    {
+                        writer.WriteLine(d);
+                    }
                 }
+            }
+            catch (IOException ex)
+            {
+                // Notifies the user if the file cannot be accessed (for example, file is open in another program)
+                MessageBox.Show($"Data Error: Could not save drivers. {ex.Message}", "File Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                // Catch for any other unexpected system errors
+                MessageBox.Show($"An unexpected error occurred: {ex.Message}", "System Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
