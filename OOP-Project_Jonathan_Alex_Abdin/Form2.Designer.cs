@@ -33,14 +33,14 @@
             label2 = new Label();
             lblDriverSelection = new Label();
             grpDriverSelection = new GroupBox();
+            txtDriverName = new TextBox();
+            label4 = new Label();
+            btnRemoveDriver = new Button();
+            btnAddDriver = new Button();
             cboDrivers = new ComboBox();
             label3 = new Label();
             btnConfirm = new Button();
             btnCancel = new Button();
-            button1 = new Button();
-            btnRemoveDriver = new Button();
-            label4 = new Label();
-            txtDriverName = new TextBox();
             grpDriverSelection.SuspendLayout();
             SuspendLayout();
             // 
@@ -93,19 +93,65 @@
             grpDriverSelection.Controls.Add(txtDriverName);
             grpDriverSelection.Controls.Add(label4);
             grpDriverSelection.Controls.Add(btnRemoveDriver);
-            grpDriverSelection.Controls.Add(button1);
+            grpDriverSelection.Controls.Add(btnAddDriver);
             grpDriverSelection.Controls.Add(cboDrivers);
             grpDriverSelection.Controls.Add(label3);
             grpDriverSelection.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             grpDriverSelection.ForeColor = SystemColors.ControlText;
             grpDriverSelection.Location = new Point(11, 142);
-            grpDriverSelection.Margin = new Padding(2, 2, 2, 2);
+            grpDriverSelection.Margin = new Padding(2);
             grpDriverSelection.Name = "grpDriverSelection";
-            grpDriverSelection.Padding = new Padding(2, 2, 2, 2);
+            grpDriverSelection.Padding = new Padding(2);
             grpDriverSelection.Size = new Size(515, 219);
             grpDriverSelection.TabIndex = 3;
             grpDriverSelection.TabStop = false;
             grpDriverSelection.Text = "Driver Selection";
+            // 
+            // txtDriverName
+            // 
+            txtDriverName.Location = new Point(172, 108);
+            txtDriverName.Name = "txtDriverName";
+            txtDriverName.Size = new Size(332, 34);
+            txtDriverName.TabIndex = 4;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(14, 111);
+            label4.Name = "label4";
+            label4.Size = new Size(126, 28);
+            label4.TabIndex = 3;
+            label4.Text = "Driver Name:";
+            // 
+            // btnRemoveDriver
+            // 
+            btnRemoveDriver.BackColor = Color.FromArgb(192, 0, 0);
+            btnRemoveDriver.FlatAppearance.BorderColor = Color.Black;
+            btnRemoveDriver.FlatStyle = FlatStyle.Flat;
+            btnRemoveDriver.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            btnRemoveDriver.ForeColor = SystemColors.ButtonHighlight;
+            btnRemoveDriver.Location = new Point(280, 151);
+            btnRemoveDriver.Name = "btnRemoveDriver";
+            btnRemoveDriver.Size = new Size(224, 63);
+            btnRemoveDriver.TabIndex = 2;
+            btnRemoveDriver.Text = "[Remove Driver]";
+            btnRemoveDriver.UseVisualStyleBackColor = false;
+            btnRemoveDriver.Click += btnRemoveDriver_Click;
+            // 
+            // btnAddDriver
+            // 
+            btnAddDriver.BackColor = Color.FromArgb(0, 192, 0);
+            btnAddDriver.FlatAppearance.BorderColor = Color.Black;
+            btnAddDriver.FlatStyle = FlatStyle.Flat;
+            btnAddDriver.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            btnAddDriver.ForeColor = SystemColors.ButtonHighlight;
+            btnAddDriver.Location = new Point(14, 151);
+            btnAddDriver.Name = "btnAddDriver";
+            btnAddDriver.Size = new Size(224, 63);
+            btnAddDriver.TabIndex = 1;
+            btnAddDriver.Text = "[Add Driver]";
+            btnAddDriver.UseVisualStyleBackColor = false;
+            btnAddDriver.Click += btnAddDriver_Click;
             // 
             // cboDrivers
             // 
@@ -113,7 +159,7 @@
             cboDrivers.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cboDrivers.FormattingEnabled = true;
             cboDrivers.Location = new Point(5, 66);
-            cboDrivers.Margin = new Padding(2, 2, 2, 2);
+            cboDrivers.Margin = new Padding(2);
             cboDrivers.Name = "cboDrivers";
             cboDrivers.Size = new Size(499, 28);
             cboDrivers.TabIndex = 0;
@@ -136,7 +182,7 @@
             btnConfirm.FlatStyle = FlatStyle.Popup;
             btnConfirm.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnConfirm.Location = new Point(25, 365);
-            btnConfirm.Margin = new Padding(2, 2, 2, 2);
+            btnConfirm.Margin = new Padding(2);
             btnConfirm.Name = "btnConfirm";
             btnConfirm.Size = new Size(224, 63);
             btnConfirm.TabIndex = 1;
@@ -150,57 +196,13 @@
             btnCancel.FlatStyle = FlatStyle.Popup;
             btnCancel.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnCancel.Location = new Point(291, 365);
-            btnCancel.Margin = new Padding(2, 2, 2, 2);
+            btnCancel.Margin = new Padding(2);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(224, 63);
             btnCancel.TabIndex = 2;
             btnCancel.Text = "[Cancel && Close]";
             btnCancel.UseVisualStyleBackColor = false;
             btnCancel.Click += btnCancel_Click;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.FromArgb(0, 192, 0);
-            button1.FlatAppearance.BorderColor = Color.Black;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            button1.ForeColor = SystemColors.ButtonHighlight;
-            button1.Location = new Point(14, 151);
-            button1.Name = "button1";
-            button1.Size = new Size(224, 63);
-            button1.TabIndex = 1;
-            button1.Text = "[Add Driver]";
-            button1.UseVisualStyleBackColor = false;
-            // 
-            // btnRemoveDriver
-            // 
-            btnRemoveDriver.BackColor = Color.FromArgb(192, 0, 0);
-            btnRemoveDriver.FlatAppearance.BorderColor = Color.Black;
-            btnRemoveDriver.FlatStyle = FlatStyle.Flat;
-            btnRemoveDriver.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            btnRemoveDriver.ForeColor = SystemColors.ButtonHighlight;
-            btnRemoveDriver.Location = new Point(280, 151);
-            btnRemoveDriver.Name = "btnRemoveDriver";
-            btnRemoveDriver.Size = new Size(224, 63);
-            btnRemoveDriver.TabIndex = 2;
-            btnRemoveDriver.Text = "[Remove Driver]";
-            btnRemoveDriver.UseVisualStyleBackColor = false;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(14, 111);
-            label4.Name = "label4";
-            label4.Size = new Size(126, 28);
-            label4.TabIndex = 3;
-            label4.Text = "Driver Name:";
-            // 
-            // txtDriverName
-            // 
-            txtDriverName.Location = new Point(172, 108);
-            txtDriverName.Name = "txtDriverName";
-            txtDriverName.Size = new Size(332, 34);
-            txtDriverName.TabIndex = 4;
             // 
             // frmAssignDriver
             // 
@@ -215,7 +217,7 @@
             Controls.Add(label2);
             Controls.Add(lblVehicleDetails);
             Controls.Add(label1);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "frmAssignDriver";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Driver Assignment Command - EcoLink Hub";
@@ -240,6 +242,6 @@
         private TextBox txtDriverName;
         private Label label4;
         private Button btnRemoveDriver;
-        private Button button1;
+        private Button btnAddDriver;
     }
 }

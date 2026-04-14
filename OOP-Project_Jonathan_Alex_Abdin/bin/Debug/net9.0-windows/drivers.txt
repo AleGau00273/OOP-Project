@@ -1,12 +1,11 @@
-Jack Burton
-<<<<<<< Updated upstream
-Max Rockatansky
-Dominic Toretto
 Frank Martin
-=======
+Max Rockatansky
+Memphis Raines
+Dominic Toretto
+Jack Burton
 Han Solo
->>>>>>> Stashed changes
 Ellen Ripley
 Ryan Gosling
 Neal Page
 Lincoln Hawk
+Abdin Ali

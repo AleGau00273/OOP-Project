@@ -71,6 +71,7 @@ namespace OOP_Project_Jonathan_Alex_Abdin
             this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
+
         private void btnAddDriver_Click(object sender, EventArgs e)
         {
             string driverName = txtDriverName.Text;
@@ -109,7 +110,7 @@ namespace OOP_Project_Jonathan_Alex_Abdin
             }
             else if (!cboDrivers.Items.Contains(driverName))
             {
-                MessageBox.Show("This driver doesn't exist.");
+                MessageBox.Show("This driver doesn't exist. \nNote: if the driver is assigned to a vehicle you need to unassign the driver to be able to remove them");
             }
             else
             {
@@ -119,7 +120,6 @@ namespace OOP_Project_Jonathan_Alex_Abdin
                 MessageBox.Show("Driver removed successfully");
             }
         }
-
         private void SaveDriversToFile()
         {
             using (StreamWriter writer = new StreamWriter("drivers.txt", false))
