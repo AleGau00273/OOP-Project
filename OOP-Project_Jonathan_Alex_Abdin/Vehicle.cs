@@ -57,6 +57,9 @@ namespace OOP_Project_Jonathan_Alex_Abdin
                 throw new InvalidOperationException("This vehicle can't handle that much weight.");
             }
 
+            if (v.CurrentSizeLoad + p.PackageSize > v.VehicleSize)
+                throw new InvalidOperationException("Size limit exceeded");
+
             //if weight is within limits, proceed to add the package.
             v.CurrentWeightLoad += p.Weight;
             v.CurrentSizeLoad += p.PackageSize;
@@ -108,9 +111,9 @@ namespace OOP_Project_Jonathan_Alex_Abdin
     }
 
     // [F-08] Sealed Classes to prevent further inheritance
-    public sealed class Drone : ElectricVehicle { public Drone() : base() { MaxCapacity = 5; } }
-    public sealed class ElectricCar : ElectricVehicle { public ElectricCar() : base() { MaxCapacity = 500; } }
-    public sealed class ElectricVan : ElectricVehicle { public ElectricVan() : base() { MaxCapacity = 1500; } }
-    public sealed class ElectricBike : ElectricVehicle { public ElectricBike() : base() { MaxCapacity = 50; } }
-    public sealed class HeavydutyHydrogenTruck : HydrogenVehicle { public HeavydutyHydrogenTruck() : base() { MaxCapacity = 5000; } }
+    public sealed class Drone : ElectricVehicle { public Drone() : base() { MaxCapacity = 5; VehicleSize = 25; } }
+    public sealed class ElectricCar : ElectricVehicle { public ElectricCar() : base() { MaxCapacity = 500; VehicleSize = 500; } }
+    public sealed class ElectricVan : ElectricVehicle { public ElectricVan() : base() { MaxCapacity = 1500; VehicleSize = 1000; } }
+    public sealed class ElectricBike : ElectricVehicle { public ElectricBike() : base() { MaxCapacity = 50; VehicleSize = 150; } }
+    public sealed class HeavydutyHydrogenTruck : HydrogenVehicle { public HeavydutyHydrogenTruck() : base() { MaxCapacity = 5000; VehicleSize = 3000; } }
 }

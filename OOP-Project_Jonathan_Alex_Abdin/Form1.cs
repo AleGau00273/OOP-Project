@@ -99,15 +99,15 @@ namespace OOP_Project_Jonathan_Alex_Abdin
             // Generating categorized packages: Small (Drones), Medium (Cars), and Heavy (Trucks)
             for (int i = 1; i <= 5; i++)
             {
-                Warehouse.Add(new Package($"S-{100 + i}", "Small Parcel", r.Next(1, 5), 1));
+                Warehouse.Add(new Package($"S-{100 + i}", "Small Parcel", r.Next(1, 5), r.Next(1,25)));
             }
             for (int i = 1; i <= 5; i++)
             {
-                Warehouse.Add(new Package($"M-{200 + i}", "Standard Box", r.Next(20, 101), 5));
+                Warehouse.Add(new Package($"M-{200 + i}", "Standard Box", r.Next(20, 101), r.Next(25, 250)));
             }
             for (int i = 1; i <= 5; i++)
             {
-                Warehouse.Add(new Package($"H-{300 + i}", "Industrial Pallet", r.Next(500, 2001), 20));
+                Warehouse.Add(new Package($"H-{300 + i}", "Industrial Pallet", r.Next(500, 2001), r.Next(250, 1000)));
             }
         }
 

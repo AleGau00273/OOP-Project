@@ -36,7 +36,7 @@ namespace OOP_Project_Jonathan_Alex_Abdin
         }
 
         // Standardizing the list display for a clean UI
-        private string GetPackageDisplayName(Package pkg) => $"{pkg.PackageID} | {pkg.Weight}kg - {pkg.Description}";
+        private string GetPackageDisplayName(Package pkg) => $"{pkg.PackageID} | {pkg.Weight}kg - {pkg.Description} - Size: {pkg.PackageSize} cm³";
 
         private void RefreshWarehouseList()
         {
