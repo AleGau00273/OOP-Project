@@ -64,7 +64,6 @@ namespace OOP_Project_Jonathan_Alex_Abdin
             v.CurrentWeightLoad += p.Weight;
             v.CurrentSizeLoad += p.PackageSize;
             v.LoadedPackages.Add(p);
-
             return v;
         }
 

@@ -14,6 +14,7 @@ build_property.ProjectTypeGuids =
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
+build_property.EntryPointFilePath = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = OOP_Project_Jonathan_Alex_Abdin
 build_property.ProjectDir = C:\Users\abdin\OneDrive\Documents\GitHub\OOP-Project\OOP-Project_Jonathan_Alex_Abdin\

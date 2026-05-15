@@ -1,1 +1,3 @@
 D-24561 Drone 5 93 Abdin Ali
+V-72228 ElectricVan 1500 99 Unassigned
+T-65712 HeavydutyHydrogenTruck 5000 61 Unassigned

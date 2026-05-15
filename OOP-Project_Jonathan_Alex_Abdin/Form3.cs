@@ -55,9 +55,16 @@ namespace OOP_Project_Jonathan_Alex_Abdin
             lblCurrentWeight.Text = $"{selectedVehicle.CurrentWeightLoad}kg";
             lblMaxWeight.Text = $"{selectedVehicle.MaxCapacity}kg";
 
-            double percent = (selectedVehicle.CurrentWeightLoad / selectedVehicle.MaxCapacity) * 100;
-            label6.Text = $"({(int)percent}%)";
-            prgCapacity.Value = (int)Math.Min(percent, 100);
+            lblCurrentSize.Text = $"{selectedVehicle.CurrentSizeLoad} cm³";
+            lblMaxSize.Text = $"{selectedVehicle.VehicleSize}cm³";
+            double weightPercent = (selectedVehicle.CurrentWeightLoad / selectedVehicle.MaxCapacity) * 100;
+            double SizePercent = (selectedVehicle.CurrentSizeLoad / selectedVehicle.VehicleSize) * 100;
+
+            label6.Text = $"({(int)weightPercent}%)";
+            prgCapacity.Value = (int)Math.Min(weightPercent, 100);
+
+            label5.Text = $"({(int)SizePercent}%)";
+            prgSize.Value = (int)Math.Min(SizePercent, 100);
         }
 
         // Attempting to add cargo via overloaded operator [F-04]
@@ -70,7 +77,7 @@ namespace OOP_Project_Jonathan_Alex_Abdin
             try
             {
                 // Using the overloaded + operator [F-04]
-                selectedVehicle = selectedVehicle + selectedPkg;
+                selectedVehicle = selectedVehicle + selectedPkg; 
 
                 // Tracking the move for the cancel rollback logic
                 sessionPackages.Add(selectedPkg);

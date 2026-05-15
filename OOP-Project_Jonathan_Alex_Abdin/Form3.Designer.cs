@@ -50,6 +50,12 @@
             btnRemoveCargo = new Button();
             btnConfimCargo = new Button();
             btnCancel = new Button();
+            label3 = new Label();
+            lblCurrentSize = new Label();
+            label7 = new Label();
+            lblMaxSize = new Label();
+            label5 = new Label();
+            prgSize = new ProgressBar();
             ((System.ComponentModel.ISupportInitialize)picBike).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picDrone).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picCar).BeginInit();
@@ -63,9 +69,10 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(227, 36);
+            label1.Location = new Point(185, 9);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(353, 54);
+            label1.Size = new Size(298, 46);
             label1.TabIndex = 1;
             label1.Text = "Loading Cargo for:";
             // 
@@ -74,9 +81,10 @@
             picBike.BackColor = Color.White;
             picBike.BorderStyle = BorderStyle.Fixed3D;
             picBike.Image = (Image)resources.GetObject("picBike.Image");
-            picBike.Location = new Point(43, 36);
+            picBike.Location = new Point(34, 20);
+            picBike.Margin = new Padding(2);
             picBike.Name = "picBike";
-            picBike.Size = new Size(150, 150);
+            picBike.Size = new Size(121, 121);
             picBike.SizeMode = PictureBoxSizeMode.Zoom;
             picBike.TabIndex = 2;
             picBike.TabStop = false;
@@ -86,9 +94,10 @@
             picDrone.BackColor = Color.White;
             picDrone.BorderStyle = BorderStyle.Fixed3D;
             picDrone.Image = (Image)resources.GetObject("picDrone.Image");
-            picDrone.Location = new Point(43, 36);
+            picDrone.Location = new Point(34, 20);
+            picDrone.Margin = new Padding(2);
             picDrone.Name = "picDrone";
-            picDrone.Size = new Size(150, 150);
+            picDrone.Size = new Size(121, 121);
             picDrone.SizeMode = PictureBoxSizeMode.Zoom;
             picDrone.TabIndex = 23;
             picDrone.TabStop = false;
@@ -98,9 +107,10 @@
             picCar.BackColor = Color.White;
             picCar.BorderStyle = BorderStyle.Fixed3D;
             picCar.Image = (Image)resources.GetObject("picCar.Image");
-            picCar.Location = new Point(43, 36);
+            picCar.Location = new Point(34, 20);
+            picCar.Margin = new Padding(2);
             picCar.Name = "picCar";
-            picCar.Size = new Size(150, 150);
+            picCar.Size = new Size(121, 121);
             picCar.SizeMode = PictureBoxSizeMode.Zoom;
             picCar.TabIndex = 24;
             picCar.TabStop = false;
@@ -110,9 +120,10 @@
             picVan.BackColor = Color.White;
             picVan.BorderStyle = BorderStyle.Fixed3D;
             picVan.Image = (Image)resources.GetObject("picVan.Image");
-            picVan.Location = new Point(43, 36);
+            picVan.Location = new Point(34, 20);
+            picVan.Margin = new Padding(2);
             picVan.Name = "picVan";
-            picVan.Size = new Size(150, 150);
+            picVan.Size = new Size(121, 121);
             picVan.SizeMode = PictureBoxSizeMode.Zoom;
             picVan.TabIndex = 25;
             picVan.TabStop = false;
@@ -122,9 +133,10 @@
             picTruck.BackColor = Color.White;
             picTruck.BorderStyle = BorderStyle.Fixed3D;
             picTruck.Image = (Image)resources.GetObject("picTruck.Image");
-            picTruck.Location = new Point(43, 36);
+            picTruck.Location = new Point(34, 20);
+            picTruck.Margin = new Padding(2);
             picTruck.Name = "picTruck";
-            picTruck.Size = new Size(150, 150);
+            picTruck.Size = new Size(121, 121);
             picTruck.SizeMode = PictureBoxSizeMode.Zoom;
             picTruck.TabIndex = 26;
             picTruck.TabStop = false;
@@ -133,9 +145,10 @@
             // 
             lblVehicleDetails.AutoSize = true;
             lblVehicleDetails.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblVehicleDetails.Location = new Point(609, 36);
+            lblVehicleDetails.Location = new Point(487, 9);
+            lblVehicleDetails.Margin = new Padding(2, 0, 2, 0);
             lblVehicleDetails.Name = "lblVehicleDetails";
-            lblVehicleDetails.Size = new Size(208, 54);
+            lblVehicleDetails.Size = new Size(177, 46);
             lblVehicleDetails.TabIndex = 27;
             lblVehicleDetails.Text = "[ Vehicle ]";
             // 
@@ -143,9 +156,10 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(210, 104);
+            label2.Location = new Point(159, 55);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(253, 45);
+            label2.Size = new Size(210, 37);
             label2.TabIndex = 28;
             label2.Text = "Current Weight: ";
             // 
@@ -153,9 +167,10 @@
             // 
             lblCurrentWeight.AutoSize = true;
             lblCurrentWeight.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblCurrentWeight.Location = new Point(450, 104);
+            lblCurrentWeight.Location = new Point(356, 55);
+            lblCurrentWeight.Margin = new Padding(2, 0, 2, 0);
             lblCurrentWeight.Name = "lblCurrentWeight";
-            lblCurrentWeight.Size = new Size(76, 45);
+            lblCurrentWeight.Size = new Size(65, 37);
             lblCurrentWeight.TabIndex = 29;
             lblCurrentWeight.Text = "0kg";
             // 
@@ -163,9 +178,10 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(568, 104);
+            label4.Location = new Point(487, 55);
+            label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(126, 45);
+            label4.Size = new Size(105, 37);
             label4.TabIndex = 30;
             label4.Text = " / Max: ";
             // 
@@ -173,9 +189,10 @@
             // 
             lblMaxWeight.AutoSize = true;
             lblMaxWeight.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblMaxWeight.Location = new Point(680, 104);
+            lblMaxWeight.Location = new Point(582, 55);
+            lblMaxWeight.Margin = new Padding(2, 0, 2, 0);
             lblMaxWeight.Name = "lblMaxWeight";
-            lblMaxWeight.Size = new Size(76, 45);
+            lblMaxWeight.Size = new Size(65, 37);
             lblMaxWeight.TabIndex = 31;
             lblMaxWeight.Text = "0kg";
             // 
@@ -183,17 +200,19 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(724, 170);
+            label6.Location = new Point(724, 55);
+            label6.Margin = new Padding(2, 0, 2, 0);
             label6.Name = "label6";
-            label6.Size = new Size(83, 45);
+            label6.Size = new Size(70, 37);
             label6.TabIndex = 32;
             label6.Text = "(0%)";
             // 
             // prgCapacity
             // 
-            prgCapacity.Location = new Point(817, 181);
+            prgCapacity.Location = new Point(827, 65);
+            prgCapacity.Margin = new Padding(2);
             prgCapacity.Name = "prgCapacity";
-            prgCapacity.Size = new Size(484, 34);
+            prgCapacity.Size = new Size(387, 27);
             prgCapacity.TabIndex = 33;
             // 
             // groupBox1
@@ -201,9 +220,11 @@
             groupBox1.BackColor = Color.FromArgb(210, 180, 222);
             groupBox1.Controls.Add(lstWarehouse);
             groupBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            groupBox1.Location = new Point(43, 221);
+            groupBox1.Location = new Point(62, 167);
+            groupBox1.Margin = new Padding(2);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(473, 364);
+            groupBox1.Padding = new Padding(2);
+            groupBox1.Size = new Size(471, 299);
             groupBox1.TabIndex = 34;
             groupBox1.TabStop = false;
             groupBox1.Text = "Available Packages (Bulk Warehouse)";
@@ -211,9 +232,10 @@
             // lstWarehouse
             // 
             lstWarehouse.FormattingEnabled = true;
-            lstWarehouse.Location = new Point(20, 48);
+            lstWarehouse.Location = new Point(18, 38);
+            lstWarehouse.Margin = new Padding(2);
             lstWarehouse.Name = "lstWarehouse";
-            lstWarehouse.Size = new Size(430, 292);
+            lstWarehouse.Size = new Size(434, 228);
             lstWarehouse.TabIndex = 35;
             // 
             // groupBox2
@@ -221,9 +243,11 @@
             groupBox2.BackColor = Color.FromArgb(210, 180, 222);
             groupBox2.Controls.Add(lstVehicleCargo);
             groupBox2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            groupBox2.Location = new Point(817, 221);
+            groupBox2.Location = new Point(775, 167);
+            groupBox2.Margin = new Padding(2);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(473, 364);
+            groupBox2.Padding = new Padding(2);
+            groupBox2.Size = new Size(439, 299);
             groupBox2.TabIndex = 36;
             groupBox2.TabStop = false;
             groupBox2.Text = "Currently Loaded (Vehicle Inventory)";
@@ -231,9 +255,10 @@
             // lstVehicleCargo
             // 
             lstVehicleCargo.FormattingEnabled = true;
-            lstVehicleCargo.Location = new Point(20, 48);
+            lstVehicleCargo.Location = new Point(16, 38);
+            lstVehicleCargo.Margin = new Padding(2);
             lstVehicleCargo.Name = "lstVehicleCargo";
-            lstVehicleCargo.Size = new Size(430, 292);
+            lstVehicleCargo.Size = new Size(404, 228);
             lstVehicleCargo.TabIndex = 35;
             // 
             // btnAddCargo
@@ -241,9 +266,10 @@
             btnAddCargo.BackColor = Color.FromArgb(155, 89, 182);
             btnAddCargo.FlatStyle = FlatStyle.Popup;
             btnAddCargo.Font = new Font("Segoe UI", 36F, FontStyle.Bold);
-            btnAddCargo.Location = new Point(541, 286);
+            btnAddCargo.Location = new Point(554, 219);
+            btnAddCargo.Margin = new Padding(2);
             btnAddCargo.Name = "btnAddCargo";
-            btnAddCargo.Size = new Size(251, 107);
+            btnAddCargo.Size = new Size(201, 86);
             btnAddCargo.TabIndex = 37;
             btnAddCargo.Text = ">";
             btnAddCargo.UseVisualStyleBackColor = false;
@@ -254,9 +280,10 @@
             btnRemoveCargo.BackColor = Color.FromArgb(155, 89, 182);
             btnRemoveCargo.FlatStyle = FlatStyle.Popup;
             btnRemoveCargo.Font = new Font("Segoe UI", 36F, FontStyle.Bold);
-            btnRemoveCargo.Location = new Point(541, 425);
+            btnRemoveCargo.Location = new Point(554, 330);
+            btnRemoveCargo.Margin = new Padding(2);
             btnRemoveCargo.Name = "btnRemoveCargo";
-            btnRemoveCargo.Size = new Size(251, 107);
+            btnRemoveCargo.Size = new Size(201, 86);
             btnRemoveCargo.TabIndex = 38;
             btnRemoveCargo.Text = "<";
             btnRemoveCargo.UseVisualStyleBackColor = false;
@@ -267,9 +294,10 @@
             btnConfimCargo.BackColor = Color.FromArgb(155, 89, 182);
             btnConfimCargo.FlatStyle = FlatStyle.Popup;
             btnConfimCargo.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnConfimCargo.Location = new Point(43, 608);
+            btnConfimCargo.Location = new Point(80, 486);
+            btnConfimCargo.Margin = new Padding(2);
             btnConfimCargo.Name = "btnConfimCargo";
-            btnConfimCargo.Size = new Size(826, 89);
+            btnConfimCargo.Size = new Size(661, 71);
             btnConfimCargo.TabIndex = 39;
             btnConfimCargo.Text = "[Confirm && Update Fleet]";
             btnConfimCargo.UseVisualStyleBackColor = false;
@@ -280,20 +308,90 @@
             btnCancel.BackColor = Color.FromArgb(213, 216, 220);
             btnCancel.FlatStyle = FlatStyle.Popup;
             btnCancel.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCancel.Location = new Point(916, 608);
+            btnCancel.Location = new Point(894, 486);
+            btnCancel.Margin = new Padding(2);
             btnCancel.Name = "btnCancel";
-            btnCancel.Size = new Size(376, 89);
+            btnCancel.Size = new Size(301, 71);
             btnCancel.TabIndex = 40;
             btnCancel.Text = "[Cancel && Close]";
             btnCancel.UseVisualStyleBackColor = false;
             btnCancel.Click += btnCancel_Click;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(159, 104);
+            label3.Margin = new Padding(2, 0, 2, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(172, 37);
+            label3.TabIndex = 41;
+            label3.Text = "Current Size: ";
+            // 
+            // lblCurrentSize
+            // 
+            lblCurrentSize.AutoSize = true;
+            lblCurrentSize.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblCurrentSize.Location = new Point(356, 114);
+            lblCurrentSize.Margin = new Padding(2, 0, 2, 0);
+            lblCurrentSize.Name = "lblCurrentSize";
+            lblCurrentSize.Size = new Size(82, 37);
+            lblCurrentSize.TabIndex = 42;
+            lblCurrentSize.Text = "0cm³";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.Location = new Point(487, 114);
+            label7.Margin = new Padding(2, 0, 2, 0);
+            label7.Name = "label7";
+            label7.Size = new Size(105, 37);
+            label7.TabIndex = 43;
+            label7.Text = " / Max: ";
+            // 
+            // lblMaxSize
+            // 
+            lblMaxSize.AutoSize = true;
+            lblMaxSize.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblMaxSize.Location = new Point(582, 114);
+            lblMaxSize.Margin = new Padding(2, 0, 2, 0);
+            lblMaxSize.Name = "lblMaxSize";
+            lblMaxSize.Size = new Size(82, 37);
+            lblMaxSize.TabIndex = 44;
+            lblMaxSize.Text = "0cm³";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(724, 114);
+            label5.Margin = new Padding(2, 0, 2, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(70, 37);
+            label5.TabIndex = 45;
+            label5.Text = "(0%)";
+            // 
+            // prgSize
+            // 
+            prgSize.Location = new Point(827, 124);
+            prgSize.Margin = new Padding(2);
+            prgSize.Name = "prgSize";
+            prgSize.Size = new Size(387, 27);
+            prgSize.TabIndex = 46;
+            // 
             // frmManageCargo
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(210, 180, 222);
-            ClientSize = new Size(1338, 728);
+            ClientSize = new Size(1275, 582);
+            Controls.Add(prgSize);
+            Controls.Add(label5);
+            Controls.Add(lblMaxSize);
+            Controls.Add(label7);
+            Controls.Add(lblCurrentSize);
+            Controls.Add(label3);
             Controls.Add(btnCancel);
             Controls.Add(btnConfimCargo);
             Controls.Add(btnRemoveCargo);
@@ -313,6 +411,7 @@
             Controls.Add(picCar);
             Controls.Add(picVan);
             Controls.Add(picTruck);
+            Margin = new Padding(2);
             Name = "frmManageCargo";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Cargo Loading Management - EcoLink Hub";
@@ -351,5 +450,11 @@
         private Button btnRemoveCargo;
         private Button btnConfimCargo;
         private Button btnCancel;
+        private Label label3;
+        private Label lblCurrentSize;
+        private Label label7;
+        private Label lblMaxSize;
+        private Label label5;
+        private ProgressBar prgSize;
     }
 }

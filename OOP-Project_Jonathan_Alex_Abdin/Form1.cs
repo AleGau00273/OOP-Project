@@ -26,6 +26,7 @@ namespace OOP_Project_Jonathan_Alex_Abdin
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
             // Initializing our driver pool from the external text file at startup [F-07]
             FleetManager.InitializeDriverPool();
 
@@ -182,6 +183,7 @@ namespace OOP_Project_Jonathan_Alex_Abdin
             lblDisplayDriver.Text = selected.DriverName;
             lblDisplayMaxPayload.Text = $"{selected.MaxCapacity} kg";
             lblDisplayPayload.Text = $"{selected.CurrentWeightLoad} kg";
+            lblDisplaySize.Text = $"{selected.CurrentSizeLoad} cm³";
             lblFuelPercent.Text = $"{selected.EnergyLevel}%";
             lblDisplayFuelType.Text = (selected is ElectricVehicle) ? "Battery" : "Hydrogen";
 
@@ -313,6 +315,7 @@ namespace OOP_Project_Jonathan_Alex_Abdin
                     if (cargoForm.ShowDialog() == DialogResult.OK)
                     {
                         lblDisplayPayload.Text = $"{selected.CurrentWeightLoad} kg";
+                        lblDisplaySize.Text = $"{selected.CurrentSizeLoad} cm³";
                     }
                 }
             }
